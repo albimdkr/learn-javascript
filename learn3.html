@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LEARN 3 | JAVASCRIPT</title>
+  </head>
+  <link rel="icon" type="image/x-icon" href="/img/js-logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;1,300&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      font-family: "Poppins", sans-serif;
+      padding: 0px;
+      margin: 0px;
+    }
+
+    body {
+      background-color: rgb(43, 43, 43);
+    }
+
+    .container {
+      border-radius: 20px;
+      margin: 5em auto;
+      width: 50em;
+      /* background-color: #ffee03; */
+      background-color: #ffee03;
+      padding: 50px;
+      text-align: center;
+      z-index: 0;
+      transition: all 0.5s;
+    }
+
+    .container:hover {
+      box-shadow: 0px 0px 74px -6px rgba(255, 255, 255, 0.35);
+      -webkit-box-shadow: 0px 0px 74px -6px rgba(255, 255, 255, 0.35);
+      -moz-box-shadow: 0px 0px 74px -6px rgba(255, 255, 255, 0.35);
+    }
+
+    h2 {
+      font-weight: 500;
+      margin: 10px;
+      text-align: center;
+      align-items: center;
+      font-weight: 700;
+    }
+
+    .board {
+      box-sizing: border-box;
+      margin: 50px;
+      padding: 50px;
+      border: 3px solid white;
+      border-radius: 10px;
+    }
+
+    h3 {
+      margin: 10px;
+    }
+
+    .container-arithmetic {
+      padding: 10px;
+      margin: 7px;
+      border: 2px solid white;
+    }
+
+    .container-assigment {
+      padding: 10px;
+      margin: 7px;
+      border: 2px solid white;
+    }
+
+    .container-comparison {
+      padding: 10px;
+      margin: 7px;
+      border: 2px solid white;
+    }
+
+    .container-logical {
+      padding: 10px;
+      margin: 7px;
+      border: 2px solid white;
+    }
+
+    .container-type{
+      padding: 10px;
+      margin: 7px;
+      border: 2px solid white;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        margin: 5em auto;
+        width: 30em;
+        padding: 50px;
+        text-align: center;
+        z-index: 0;
+      }
+    }
+
+    @media (max-width: 678px) {
+      .container {
+        margin: 5em auto;
+        width: 20em;
+        padding: 50px;
+        text-align: center;
+        z-index: 0;
+      }
+    }
+  </style>
+  <body>
+    <div class="container" id="container">
+      <h2>JAVASCRIPT BASIC</h2>
+      <div class="board">
+        <h3 id="title">OPERATOR</h3>
+        <div class="implentation">
+          <div class="container-arithmetic">
+            <h3>Arithmetic</h3>
+            <p id="arithmetic-1"></p>
+            <p id="arithmetic-2"></p>
+            <p id="arithmetic-3"></p>
+            <p id="arithmetic-4"></p>
+            <p id="arithmetic-5"></p>
+          </div>
+
+          <div class="container-assigment">
+            <h3>Assigment</h3>
+            <p id="assigment-1"></p>
+            <p id="assigment-2"></p>
+            <p id="assigment-3"></p>
+            <p id="assigment-4"></p>
+          </div>
+
+          <div class="container-comparison">
+            <h3>Comparison</h3>
+            <p id="comparison-1"></p>
+            <p id="comparison-2"></p>
+            <p id="comparison-3"></p>
+            <p id="comparison-4"></p>
+          </div>
+
+          <div class="container-logical">
+            <h3>Logical</h3>
+            <p id="logical-1"></p>
+            <p id="logical-2"></p>
+            <p id="logical-3"></p>
+            <p id="logical-4"></p>
+          </div>
+
+          <div class="container-conditional">
+            <h3>Conditional</h3>
+            <p id="conditional-1"></p>
+            <p id="conditional-2"></p>
+            <p id="conditional-3"></p>
+            <p id="conditional-4"></p>
+          </div>
+
+          <div class="container-type">
+            <h3>Type</h3>
+            <p id="type-1"></p>
+            <p id="type-2"></p>
+            <p id="type-3"></p>
+            <p id="type-4"></p>
+          </div>
+
+
+
+        </div>
+      </div>
+    </div>
+
+    <script>
+        
+      // OPR - ARITHMETIC (+, -, *, /, %)
+      var valueA = 100; //declare
+      var valueB = 20;
+      // (+) tambah
+      result = valueA + valueB;
+      document.getElementById("arithmetic-1").innerHTML = "100 + 20 = " + result;
+      //(-) kurang
+      result = valueA - valueB;
+      document.getElementById("arithmetic-2").innerHTML = "100 - 20 = " + result;
+      //(*) kali
+      result = valueA * valueB;
+      document.getElementById("arithmetic-3").innerHTML = "100 * 20 = " + result;
+      //(/) bagi
+      result = valueA / valueB;
+      document.getElementById("arithmetic-4").innerHTML = "100 / 20 = " + result;
+      //(%) module
+      result = valueA % valueB;
+      document.getElementById("arithmetic-5").innerHTML = "100 % 20 = " + result;
+
+
+
+
+      // OPR - ASSIGMENT/PENUGASAN (=, +=, -=, *=, /=, %=, **=)
+      
+
+    </script>
+  </body>
+</html>

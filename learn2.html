@@ -101,7 +101,7 @@
     <div class="container" id="container">
       <h2>JAVASCRIPT BASIC</h2>
       <div class="board">
-        <h3 id="title">Syntax, Variable, Operator</h3>
+        <h3 id="title">Syntax, Variable</h3>
         <div class="implentation">
           <div class="container-syntax">
             <h3>Syntax</h3>
@@ -117,16 +117,6 @@
             <p id="const1"></p>
           </div>
 
-          <div class="container-operator">
-            <h3>Operator</h3>
-            <p id="operator-str"></p>
-            <p id="operator-int1"></p>
-            <p id="operator-int2"></p>
-            <p id="operator-int3"></p>
-            <p id="operator-int4"></p>
-            <p id="operator-int5"></p>
-            <p id="operator-int6"></p>
-          </div>
         </div>
       </div>
     </div>
@@ -170,36 +160,6 @@
         document.getElementById("const1").style.color = "white";
         document.getElementById("const1").style.textAlign = "center";
       }
-
-      //OPERATOR (+, -, *, /, %)
-      //string
-      let sayHallo = "Hello";
-      sayHallo += "Everyone"; //add concernate
-      document.getElementById("operator-str").innerHTML = "operator with string : " + sayHallo;
-
-      //integer
-      var valueA = 100; //declare
-      var valueB = 20;
-
-      // (+)
-      result = valueA + valueB;
-      document.getElementById("operator-int1").innerHTML = "100 + 20 = " + result;
-
-      //(-)
-      result = valueA - valueB;
-      document.getElementById("operator-int2").innerHTML = "100 - 20 = " + result;
-
-      //(*)
-      result = valueA * valueB;
-      document.getElementById("operator-int3").innerHTML = "100 * 20 = " + result;
-
-      //(/)
-      result = valueA / valueB;
-      document.getElementById("operator-int4").innerHTML = "100 / 20 = " + result;
-
-      //(%)
-      result = valueA % valueB;
-      document.getElementById("operator-int5").innerHTML = "100 % 20 = " + result;
     </script>
   </body>
 </html>
