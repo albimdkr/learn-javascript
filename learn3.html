@@ -77,6 +77,12 @@
       border: 2px solid white;
     }
 
+    .container-conditional {
+      padding: 10px;
+      margin: 7px;
+      border: 2px solid white;
+    }
+
     .container-logical {
       padding: 10px;
       margin: 7px;
@@ -127,9 +133,12 @@
           <div class="container-assigment">
             <h3>Assigment</h3>
             <p id="assigment-1"></p>
+            <p id="assigment-concatenate-string"></p>
             <p id="assigment-2"></p>
             <p id="assigment-3"></p>
             <p id="assigment-4"></p>
+            <p id="assigment-5"></p>
+            <p id="assigment-6"></p>
           </div>
 
           <div class="container-comparison">
@@ -138,6 +147,10 @@
             <p id="comparison-2"></p>
             <p id="comparison-3"></p>
             <p id="comparison-4"></p>
+            <p id="comparison-5"></p>
+            <p id="comparison-6"></p>
+            <p id="comparison-7"></p>
+            <p id="comparison-8"></p>
           </div>
 
           <div class="container-logical">
@@ -145,7 +158,6 @@
             <p id="logical-1"></p>
             <p id="logical-2"></p>
             <p id="logical-3"></p>
-            <p id="logical-4"></p>
           </div>
 
           <div class="container-conditional">
@@ -163,9 +175,6 @@
             <p id="type-3"></p>
             <p id="type-4"></p>
           </div>
-
-
-
         </div>
       </div>
     </div>
@@ -191,12 +200,90 @@
       result = valueA % valueB;
       document.getElementById("arithmetic-5").innerHTML = "100 % 20 = " + result;
 
-
-
-
       // OPR - ASSIGMENT/PENUGASAN (=, +=, -=, *=, /=, %=, **=)
-      
+      //=
+      let valueC = 10;
+      valueC += 5;
+      document.getElementById("assigment-1").innerHTML = "valueC = 10 += 5 = " + valueC + "<br>" + " or";
+      //orr
+      let MyCatName = "me";
+      MyCatName += "ongg";
+      document.getElementById("assigment-concatenate-string").innerHTML = "nama kucing saya adalah : " + MyCatName;
+      // (-)
+      let valueD = 10;
+      valueD -= 3;
+      document.getElementById("assigment-2").innerHTML = "valueD = 10 -= 3 = " + valueD;
+      // (*)
+      let valueE = 11;
+      valueE *= 2;
+      document.getElementById("assigment-3").innerHTML = "valueE = 11 *= 4 = " + valueE;
+      // (/)
+      let valueF = 10;
+      valueF /= 2;
+      document.getElementById("assigment-4").innerHTML = "valueE = 10 /= 2 = " + valueF;
+      // (%)
+      let valueG = 13;
+      valueE %= 10;
+      document.getElementById("assigment-5").innerHTML = "valueG = 13 %= 10 = " + valueG;
 
+      // OPR - COMPARISON
+      // (==)
+      var nilaiA = 10;
+      var nilaiB = 10;
+      var hasilAB = nilaiA == nilaiB;
+      document.getElementById("comparison-1").innerHTML = "10 == 10 : " + hasilAB;
+      // strict (===)
+      var nilaiC = 10;
+      var nilaiD = "10";
+      var hasilCD = nilaiC === nilaiD;
+      document.getElementById("comparison-2").innerHTML = "10 === '10' : " + hasilCD;
+      //(!=)
+      var nilaiE = 10;
+      var nilaiF = 9;
+      hasilEF = nilaiE != nilaiF;
+      document.getElementById("comparison-3").innerHTML = "10 != 9 : " + hasilEF;
+      //(!==)
+      var nilaiG = 10;
+      var nilaiH = 10;
+      hasilGH = nilaiG !== nilaiH;
+      document.getElementById("comparison-4").innerHTML = "10 !== 10 : " + hasilGH;
+      //(>)
+      var nilaiI = 11;
+      var nilaiJ = 10;
+      var hasilIJ = nilaiI > nilaiJ;
+      document.getElementById("comparison-5").innerHTML = "11 > 10 : " + hasilIJ;
+      //(<)
+      var nilaiK = 11;
+      var nilaiL = 10;
+      var hasilKL = nilaiK < nilaiL;
+      document.getElementById("comparison-6").innerHTML = "11 < 10 : " + hasilKL;
+      //(>=)
+      var nilaiM = 10;
+      var nilaiN = 11;
+      var hasilMN = nilaiM >= nilaiN;
+      document.getElementById("comparison-7").innerHTML = "10 >= 11 : " + hasilMN;
+      //(<=)
+      var nilaiO = 10;
+      var nilaiP = 11;
+      var hasilOP = nilaiO <= nilaiP;
+      document.getElementById("comparison-8").innerHTML = "10 <= 11 : " + hasilOP;
+
+
+
+
+
+
+
+
+
+
+
+
+      // OPR - LOGICAL (&&, ||, !)
+      var x = 10;
+      var i = (x % 10) && (x * 10);
+      
+      document.getElementById("logical-1").innerHTML = i;
     </script>
   </body>
 </html>
