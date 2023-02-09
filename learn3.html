@@ -163,9 +163,6 @@
           <div class="container-conditional">
             <h3>Conditional</h3>
             <p id="conditional-1"></p>
-            <p id="conditional-2"></p>
-            <p id="conditional-3"></p>
-            <p id="conditional-4"></p>
           </div>
 
           <div class="container-type">
@@ -268,22 +265,56 @@
       var hasilOP = nilaiO <= nilaiP;
       document.getElementById("comparison-8").innerHTML = "10 <= 11 : " + hasilOP;
 
-
-
-
-
-
-
-
-
-
-
-
       // OPR - LOGICAL (&&, ||, !)
-      var x = 10;
-      var i = (x % 10) && (x * 10);
+      // AND (&&)
+      //kondisi 1
+      var x = 12;
+      //cek apakah x bilangan genap atau bukan
+      var hasilKondisi1 = (x % 2 == 0);
+      //5 dibagi 2 = ada sisanya maka hasilnya adalah : false
+      //kondisi 2
+      var y = 12;
+      var z = 10;
+      var hasilKondisi2 = y < z;
+      //oke, kita gabungkan kedua kondisi tersebut dengan logika AND (&&)
+      // dalam AND, ada yang satu salah maka akan bernilai : FALSE
+      var hasilOperatorAND = (x % 2 == 0) && y < z;
+      document.getElementById("logical-1").innerHTML = "(&&) kondisi 1 AND : (x % 2 == 0) = " + hasilKondisi1 + "<br>" + "(&&) kondisi 2 AND : 12 < 10  = " + hasilKondisi2 + "<br>" + " (&&)Gabungkan AND : (x % 2 == 0) && 12 < 10 =  " + hasilOperatorAND;
+
+      //OPR - OR (||)
+      //kondisi 1
+      var d = 12;
+      var hasilKondisi1OR = (d % 2 == 0)
+      //kondisi 2
+      var e = 10;
+      var f = 9;
+      var hasilkondisi2OR = e < f;
+      //gabungkan kedua kondisi tersebut dengan menggunakan operator logical OR (||)
+      var hasilOperatorOR =  (d % 2 == 0) || e < f;
+      //dalam OR, apabila ada kondisi 1 salah, maka hasilnya adalah TRUE atau BENAR
+      document.getElementById("logical-2").innerHTML = "(||)kondisi 1 OR : (d % 2 == 0) " + hasilKondisi1OR + "<br>" + "(||)kondisi 2 OR : e < f " + hasilkondisi2OR + "<br>" + "(||)Gabungkan OR : " + hasilOperatorOR;
+
+      //OPR - NOT (!)
+      //untuk operator NOT, kerjanya ialah dibalikan apabila suatu kondisi TRUE lalu gunakan opr NOT maka akan bernilai FALSE
+       var h = 10;
+       var i = 12;
+       var hasilOperatorNOTSebelum = (h < i);
+       var hasilOperatorNOTSesudah = !(h<i);
+       document.getElementById("logical-3").innerHTML = "(!)kondisi sebelum menggunakan NOT : (10 < 12) = " + hasilOperatorNOTSebelum + "<br>" + "(!)kondisi sesudah menggunakan NOT : !(10 < 12) = " + hasilOperatorNOTSesudah;
+       
+       //OPR conditional - (kondisi) ? "benar" : "salah"
+       // kinerja nya, ialah untuk memnentukan suatu kondisi 
+       var contohNilai = 10;
+       var hasilOperatorConditional = (contohNilai % 2 == 0) ? "genap" : "ganjil";
+       document.getElementById("conditional-1").innerHTML = "(10 % 2 == 0) ? 'genap' : 'ganjil' Maka hasilnya adalah = " + hasilOperatorConditional;
+
+       // OPR TYPEOF 
+       // operator typeof digunakan untuk memnentukan sebuah tipe data apa, dari sebuah nilai
+      var hasilOperatorType1 = typeof(11);
+      var hasilOperatorType2 = typeof(false);
+      var hasilOperatorType3 = typeof ("hello world");
+      document.getElementById("type-1").innerHTML = "hasil typeof(11) = " +  hasilOperatorType1 + "<br>" + "hasil typeof(false) = " +  hasilOperatorType2 + "<br>" + "hasil typeof (hello world) = " + hasilOperatorType3;
       
-      document.getElementById("logical-1").innerHTML = i;
     </script>
   </body>
 </html>
