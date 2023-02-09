@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LEARN 4 | JAVASCRIPT</title>
+  </head>
+  <link rel="icon" type="image/x-icon" href="/img/js-logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;1,300&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      font-family: "Poppins", sans-serif;
+      padding: 0px;
+      margin: 0px;
+    }
+
+    body {
+      background-color: rgb(43, 43, 43);
+    }
+
+    .container {
+      border-radius: 20px;
+      margin: 5em auto;
+      width: 50em;
+      /* background-color: #ffee03; */
+      background-color: #ffee03;
+      padding: 50px;
+      text-align: center;
+      z-index: 0;
+      transition: all 0.5s;
+    }
+
+    .container:hover {
+      box-shadow: 0px 0px 74px -6px rgba(255, 255, 255, 0.35);
+      -webkit-box-shadow: 0px 0px 74px -6px rgba(255, 255, 255, 0.35);
+      -moz-box-shadow: 0px 0px 74px -6px rgba(255, 255, 255, 0.35);
+    }
+
+    h2 {
+      font-weight: 500;
+      margin: 10px;
+      text-align: center;
+      align-items: center;
+      font-weight: 700;
+    }
+
+    .board {
+      box-sizing: border-box;
+      margin: 50px;
+      padding: 50px;
+      border: 3px solid white;
+      border-radius: 10px;
+    }
+
+    h3 {
+      margin: 10px;
+    }
+
+    .container-jenis {
+      padding: 10px;
+      margin: 7px;
+      border: 2px solid white;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        margin: 5em auto;
+        width: 30em;
+        padding: 50px;
+        text-align: center;
+        z-index: 0;
+      }
+    }
+
+    @media (max-width: 678px) {
+      .container {
+        margin: 5em auto;
+        width: 20em;
+        padding: 50px;
+        text-align: center;
+        z-index: 0;
+      }
+    }
+  </style>
+  <body>
+    <div class="container" id="container">
+        <h2>JAVASCRIPT BASIC</h2>
+        <div class="board">
+          <h3 id="title">DATA TYPE</h3>
+          <div class="implentation">
+            <div class="container-jenis">
+              <h3>Jenis</h3>
+              <p id="string"></p>
+              <p id="number"></p>
+              <p id="boolean"></p>
+              <p id="undefined"></p>
+              <p id="null"></p>
+              <p id="symbol"></p>
+              <p id="object"></p>
+              <p id="array"></p>
+              <p id="bigint"></p>
+            </div>
+          </div>
+        </div>
+    </div>
+    <script>
+        //01. type string
+        var first = "hallo ";
+        var last = "world ";
+        document.getElementById("string").innerHTML = "String : " + first + last;
+
+        //02. type number
+        let length = 20;
+        let weight = 10;
+        document.getElementById("number").innerHTML = "Number : " + "lenght = " + length + " weigth = " + weight;
+
+        //03. type boolean
+        var x = 10;
+        var y = 20;
+        var hasilBoolean = x < y;
+        document.getElementById("boolean").innerHTML = "10 < 20 = " + hasilBoolean;
+
+        //04. type object
+        const nameMyCat = {firstName : "me", lastName : "ong"};
+        document.getElementById("object").innerHTML = "my cat name in object : " + nameMyCat;
+
+        //05. array
+        const myCars = ["Pazero", "Jeep", "Alphard"];
+        myCars[2] = "BMW"; //to changes alphard to BMW
+        myCars.push("Tesla"); //to add value in array
+        document.getElementById("array").innerHTML = "my car in array : " + myCars;
+    </script>
+  </body>
+</html>
