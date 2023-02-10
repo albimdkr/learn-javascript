@@ -58,26 +58,27 @@
     h3 {
       margin: 10px;
     }
-
-    .container-primitive {
+    .container-stringConcatenation {
       padding: 10px;
       margin: 7px;
       border: 2px solid white;
     }
-
-    .container-nonprimitive {
+    .container-longLiteral{
       padding: 10px;
       margin: 7px;
       border: 2px solid white;
     }
-
-    .container-mathNumber {
+    .container-escapeSequencesString {
       padding: 10px;
       margin: 7px;
       border: 2px solid white;
     }
-
-    .container-logarithm {
+    .container-templateLiterals {
+      padding: 10px;
+      margin: 7px;
+      border: 2px solid white;
+    }
+    .container-stringMethod {
       padding: 10px;
       margin: 7px;
       border: 2px solid white;
@@ -107,43 +108,36 @@
     <div class="container" id="container">
         <h2>JAVASCRIPT BASIC</h2>
         <div class="board">
-          <h3 id="title">MATH OBJECT</h3>
+          <h3 id="title">STRING</h3>
           <div class="implentation">
 
-            <div class="container-mathNumber">
-              <h3>Type Math</h3>
-              <p id="PI"></p>
-              <p id="round"></p>
-              <p id="floor"></p>
-              <p id="ceil"></p>
-              <p id="min"></p>
-              <p id="max"></p>
-              <p id="random"></p>
-              <p id="randNum-0-10"></p>
-              <p id="absoluteValue"></p>
-              <p id="squareRoot"></p>
-              <p id="power"></p>
-              <p id="logarithm"></p>
+            <div class="container-stringConcatenation">
+              <h3>String Concatenation</h3>
+              <p id="stringConcatenation-1"></p>
             </div>
 
-            <div class="container-logarithm">
-                <h3>logarithm</h3>
-                <p id="logarithm-1"></p>
-                <p id="logarithm-2"></p>
-              </div>
-
-            <div class="container-logarithm">
-                <h3>Trigonometri</h3>
-                <p id="sin-1"></p>
-                <p id="sin-2"></p>
-                <p id="cos-1"></p>
-                <p id="cos-2"></p>
-                <p id="randomMethod"></p>
+            <div class="container-longLiteral">
+                <h3>Long Literal</h3>
+                <p id="longLiteral-1"></p>
             </div>
 
+            <div class="container-escapeSequencesString">
+                <h3>Escape Sequences String</h3>
+                <p id="escapeSequencesString"></p>
+            </div>
+
+            <div class="container-templateLiterals">
+                <h3>Template Literals</h3>
+                <p id="templateLiterals-1"></p>
+            </div>
+
+            <div class="container-stringMethod">
+                <h3>String Method</h3>
+                <p id="stringMethod-1"></p>
+            </div>
           </div>
         </div>
     </div>
-    <script src="./js/learn5.js" ></script>
+    <script src="./js/learn6.js" ></script>
   </body>
 </html>
