@@ -18,8 +18,11 @@
         const nameMyCat = {firstName : "me", lastName : "ong"};
         document.getElementById("object").innerHTML = "my cat name in object : " + nameMyCat;
 
-        //05. array
+        //05. type array
         const myCars = ["Pazero", "Jeep", "Alphard"];
         myCars[2] = "BMW"; //to changes alphard to BMW
         myCars.push("Tesla"); //to add value in array
         document.getElementById("array").innerHTML = "my car in array : " + myCars;
+        
+
+        
