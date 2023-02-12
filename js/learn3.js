@@ -86,7 +86,7 @@
       document.getElementById("comparison-8").innerHTML = "10 <= 11 : " + hasilOP;
 
       // OPR - LOGICAL (&&, ||, !)
-      // AND (&&)
+      // LOGICAL - AND (&&)
       //kondisi 1
       var x = 12;
       //cek apakah x bilangan genap atau bukan
@@ -101,7 +101,7 @@
       var hasilOperatorAND = (x % 2 == 0) && y < z;
       document.getElementById("logical-1").innerHTML = "(&&) kondisi 1 AND : (x % 2 == 0) = " + hasilKondisi1 + "<br>" + "(&&) kondisi 2 AND : 12 < 10  = " + hasilKondisi2 + "<br>" + " (&&)Gabungkan AND : (x % 2 == 0) && 12 < 10 =  " + hasilOperatorAND;
 
-      //OPR - OR (||)
+      //LOGICAL - OR (||)
       //kondisi 1
       var d = 12;
       var hasilKondisi1OR = (d % 2 == 0)
@@ -114,7 +114,7 @@
       //dalam OR, apabila ada kondisi 1 salah, maka hasilnya adalah TRUE atau BENAR
       document.getElementById("logical-2").innerHTML = "(||)kondisi 1 OR : (d % 2 == 0) " + hasilKondisi1OR + "<br>" + "(||)kondisi 2 OR : e < f " + hasilkondisi2OR + "<br>" + "(||)Gabungkan OR : " + hasilOperatorOR;
 
-      //OPR - NOT (!)
+      //LOGICAL - NOT (!)
       //untuk operator NOT, kerjanya ialah dibalikan apabila suatu kondisi TRUE lalu gunakan opr NOT maka akan bernilai FALSE
        var h = 10;
        var i = 12;
@@ -127,6 +127,18 @@
        var contohNilai = 10;
        var hasilOperatorConditional = (contohNilai % 2 == 0) ? "genap" : "ganjil";
        document.getElementById("conditional-1").innerHTML = "(10 % 2 == 0) ? 'genap' : 'ganjil' Maka hasilnya adalah = " + hasilOperatorConditional;
+
+
+       //OPR - INCREAMENT (++)
+       let beforeIncrement = 0;
+       let afterIncrement = (++beforeIncrement);
+       document.getElementById("Increment").innerHTML = "Increment 0 : " + afterIncrement;
+
+
+       //OPR - DECREMENT (--)
+       let beforeDecrement = 1;
+       let afterDecrement = (--beforeDecrement);
+       document.getElementById("Decrement").innerHTML ="Decrement 1 : " + afterDecrement;
 
        // OPR TYPEOF 
        // operator typeof digunakan untuk memnentukan sebuah tipe data apa, dari sebuah nilai
