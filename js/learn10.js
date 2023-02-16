@@ -94,8 +94,4 @@ function getValue() {
     document.getElementById("SWITCH-CASE-Statment-2").style.color = "white";
   }
 
-
-
-  //document.getElementById("SWITCH-CASE-Statment-2").innerHTML = numberValue;
-
 }
