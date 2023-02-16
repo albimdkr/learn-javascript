@@ -79,7 +79,43 @@ const arrEmpty2 =Array();
 const useFill = Array(3).fill('Hello'); //add hello 3x
 document.getElementById("array-11").innerHTML = "method fill, static values : " + useFill;
 
-//method : 
+//method :  concat, concatenating array JOIN
+var firstNum = [1, 2, 3];
+var lastNum = [4, 5, 6];
+var joinNum = firstNum.concat(lastNum);
+document.getElementById("array-12").innerHTML = "concat method : " + joinNum;
 
+//method : length, getting array length
+var myPc = ['Mouse','Monitor','Keyboard','headset'];
+document.getElementById("array-13").innerHTML = "getting length my pc : " + myPc.length;
+
+//check item in list use condition
+const listMenu = ['V60','Tea','Mojito','Lemonade','Cappucino'];
+let checkIndeXMenu = listMenu.indexOf('Mojito');
+
+if (checkIndeXMenu === -1){
+    document.getElementById("array-14").innerHTML ="check item list : The menu " + checkIndeXMenu + " is not ready";
+} else {
+    document.getElementById("array-14").innerHTML = "check item list : The menu " + checkIndeXMenu + " is ready";
+}
+
+//using ternary
+// checkIndeXMenu === -1 
+// ? document.getElementById("array-15").innerHTML ="check with ternary true: " + checkIndeXMenu;
+// : document.getElementById("array-15").innerHTML ="check with ternary false : " checkIndeXMenu;
+
+//Method : lastindexof
+const webTech = [
+    'html',
+    'css',
+    'javascript',
+    'mongoDB',
+    'react',
+    'node JS'
+];
+
+document.getElementById("array-16").innerHTML ="method lastidexof : " + webTech.lastIndexOf('node JS');
+
+//method : includes
 
 
