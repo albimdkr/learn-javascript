@@ -117,5 +117,20 @@ const webTech = [
 document.getElementById("array-16").innerHTML ="method lastidexof : " + webTech.lastIndexOf('node JS');
 
 //method : includes
+var webLanguange = [
+    'PHP',
+    'JavaScript',
+    'Pyhton'
+];
+var checkWebLanguage = webLanguange.includes('JavaScript');
+document.getElementById("array-17").innerHTML = "method include (JavaScript) : " + checkWebLanguage;
 
+//method : checkin
+var myNumber = [11, 12, 13, 14, 15];
+var checkMyNumber = Array.isArray(myNumber);
+document.getElementById("array-17").innerHTML = "check the number in array : " + checkMyNumber;
 
+//method : toString(), convert array to string
+const catName = ['Meong', 'Chimo', 'Oren'];
+var catNameToString = catName.toString();
+document.getElementById("array-18").innerHTML = "array to string : " + catNameToString;
