@@ -114,7 +114,7 @@ const webTech = [
     'node JS'
 ];
 
-document.getElementById("array-16").innerHTML ="method lastidexof : " + webTech.lastIndexOf('node JS');
+document.getElementById("array-15").innerHTML ="method lastidexof : " + webTech.lastIndexOf('node JS');
 
 //method : includes
 var webLanguange = [
@@ -123,7 +123,7 @@ var webLanguange = [
     'Pyhton'
 ];
 var checkWebLanguage = webLanguange.includes('JavaScript');
-document.getElementById("array-17").innerHTML = "method include (JavaScript) : " + checkWebLanguage;
+document.getElementById("array-16").innerHTML = "method include (JavaScript) : " + checkWebLanguage;
 
 //method : checkin
 var myNumber = [11, 12, 13, 14, 15];
@@ -134,3 +134,26 @@ document.getElementById("array-17").innerHTML = "check the number in array : " +
 const catName = ['Meong', 'Chimo', 'Oren'];
 var catNameToString = catName.toString();
 document.getElementById("array-18").innerHTML = "array to string : " + catNameToString;
+
+//method : join
+const nameOS = [
+    'Windows',
+    'Linux',
+    'MacOS'
+];
+
+var joinNameOS = nameOS.join('/');
+document.getElementById("array-19").innerHTML =" join method : " + joinNameOS;
+
+//method : splice, removing
+var linuxDistro = [
+    'Kali linux',
+    'ParrotOS',
+    'Ubuntu',
+];
+var spliceMethod = linuxDistro.splice(0,1); //parrotOS and ubuntu
+document.getElementById("array-20").innerHTML = "splice method : " + spliceMethod;
+
+
+//method : push, adding item in array
+
