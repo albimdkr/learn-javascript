@@ -156,4 +156,57 @@ document.getElementById("array-20").innerHTML = "splice method : " + spliceMetho
 
 
 //method : push, adding item in array
+var strItemPush = [
+    'item-1 ',
+    'item-2 ',
+    ' item-3'
+];
+strItemPush.push('item-4');
+document.getElementById("array-21").innerHTML = "method push : " + strItemPush;
+
+
+//method : pop, removing item
+var strItemPop = [
+    'item1 ',
+    'item2 ',
+    ' item3'
+];
+strItemPop.pop('item1');
+document.getElementById("array-22").innerHTML = 'method pop : ' + strItemPop;
+
+//method : unshift, add element begining
+var strItemUnshift = ['coffee2','coffee3'];
+strItemUnshift.unshift('coffee1');
+document.getElementById("array-23").innerHTML = 'method unshift : ' + strItemUnshift;
+
+//method : reverse, reversing(mebalikan urutan)
+var intItemReverse  = [1,2,3,4,5];
+intItemReverse.reverse();
+document.getElementById("array-24").innerHTML = 'method reverse : ' + intItemReverse;
+
+//method : sort
+var intItemSort = [11, 12, 13, 14, 15];
+var toSort = intItemSort.sort();
+document.getElementById("array-25").innerHTML = 'method sort : ' + toSort;
+//from sort to reverse
+var toReverse = intItemReverse.reverse();
+document.getElementById("array-26").innerHTML = 'from sort to reverse : ' + toReverse;
+
+//method : arrayOfArray, can store any data types and includes
+//case1
+const intNum1 = [1,2,3];
+const intNum2 = [4,5,6];
+var useMethodArrayOfArray = [[1,2,3], [1,2,3]];
+document.getElementById("array-27").innerHTML = 'see case1 : ' + useMethodArrayOfArray[1];
+
+//case2
+const frontEnd = ['HTML','CSS','JavaScript','React JS'];
+const backEnd = ['JavaScript','Node JS','MongoDB','API'];
+const fullStack = [frontEnd, backEnd];
+
+document.getElementById("array-28").innerHTML = 'Include with arrayOfArray method : '+ fullStack;
+document.getElementById("array-29").innerHTML = 'see length fullstack : ' + fullStack.length;
+document.getElementById("array-30").innerHTML = 'access frontEnd : ' + fullStack[0];
+document.getElementById("array-31").innerHTML = 'access backEnd : ' + fullStack[1];
+
 
