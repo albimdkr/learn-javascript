@@ -96,7 +96,7 @@ do {
     e++
 } while (e <= 5);
 
-//case 3 : sum array with while loop
+//case 3 : sum array with do while loop
 const numX = [1,2,3,4,5];
 let sumX = 0;
 let j = 0;
@@ -106,3 +106,48 @@ do {
     j++
 } while (j < numX.length);
 
+
+//FOR OF LOOP
+//structure
+document.getElementById("structure-forofloop").innerHTML = "for (const element of arr){" + "<br>" + "//code here" + "<br>" + "};";
+document.getElementById("structure-forofloop").style.fontWeight = "600";
+document.getElementById("structure-forofloop").style.textAlign = "left";
+
+//case 1 : forofloop
+const numY = [1,2,3,4,5];
+for (const numTarget of numY){
+    document.getElementById("forofloop-1").innerHTML = "forofloop-1 : " + numTarget;
+};
+
+//case 2 : forofloop with arithmetic
+const numA = [1,2,3,4,5];
+for (const calNumA of numA){
+    document.getElementById("forofloop-2").innerHTML = "forofloop-2, with arithmetic : " + (calNumA * calNumA);
+};
+
+//case 3 : forloop with adding all number in array
+const val1 = [1,2,3,4,5];
+let sumVal = 0;
+for (const resultX of val1){
+    sumVal = sumVal + resultX;
+};
+document.getElementById("forofloop-3").innerHTML = "forofloop-3, adding in array : " + sumVal;
+
+//case 4 : forofloop with method array uppercase()
+const techWeb = [
+    'HTML5',
+    'CSS3',
+    'JavaScript',
+    'React'
+];
+
+for (const techUse of techWeb){
+    var techUseToUppercase = (techUse.toUpperCase());
+    document.getElementById("forofloop-4").innerHTML = "forofloop-4, with uppercase : " + techUseToUppercase;
+};
+
+//case 5 : forofloop, get only the first off each element
+for (techFirst of techWeb){
+    var accessFirst = (techFirst[0]);
+    document.getElementById("forofloop-5").innerHTML = "forofloop-5, get only forst element : " + accessFirst;
+};
