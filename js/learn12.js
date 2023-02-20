@@ -76,3 +76,33 @@ while (x < numArrW.length){
 document.getElementById("whileloop-3").innerHTML = "whileloop-3, sum array : " + sumArrW;
 
 //DO WHILE LOOP
+//structure
+document.getElementById("structure-dowhileloop").innerHTML = "initialization" + "<br>" + "do {" + "<br>" + "//code here" + "<br>" + "increment/decrement" + "<br>" + "} while (condition)" ;
+document.getElementById("structure-dowhileloop").style.fontWeight = "600";
+document.getElementById("structure-dowhileloop").style.textAlign = "left";
+
+//case 1 : while loop
+let d = 0;
+do {
+    document.getElementById("dowhileloop-1").innerHTML = 'dowhileloop-1 : ' + d;
+    d++
+} while (d <= 5);
+
+//case 2 : use arithmetic
+let e = 0;
+do {
+    var calculateNumE = `${e} * ${e} = ${e * e}`;
+    document.getElementById("dowhileloop-2").innerHTML ="dowhileloop-2 : " + calculateNumE;
+    e++
+} while (e <= 5);
+
+//case 3 : sum array with while loop
+const numX = [1,2,3,4,5];
+let sumX = 0;
+let j = 0;
+do {
+    sumX += numX[j];
+    document.getElementById("dowhileloop-3").innerHTML = "dowhileloop-3, sum array : " + sumX;
+    j++
+} while (j < numX.length);
+
