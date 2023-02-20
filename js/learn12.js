@@ -16,19 +16,26 @@ for (let varY = 0; varY <= 5; varY++){
 };
 
 //case 3 : print array with add element array toUppercase()
-var learnJS = ['data','condition','array','loop'];
-const newLearnJS = [];
-for (let i = 0; i <= learnJS.length; i++){
-    newLearnJS.push(learnJS[i].toUpperCase());
-    document.getElementById("loop-3").innerHTML = 'loop-3, print array with element array toUppercase : ' + newLearnJS;
+const learnJS = ['data','condition','array','loop'];
+const newJS = [];
+for (let i = 0; i < learnJS.length; i++){
+    newJS.push(learnJS[i].toUpperCase());
+    document.getElementById("loop-3").innerHTML = 'loop-3, print array with element array toUppercase : ' + newJS;
 };
 
-//if numberintZ 
-const numberIntZ = [1,2,3,4,5];
-let sumArrNum = 0;
-for (let z = 0; z < numberIntZ.length; z++){
-    //sumArrNum = sumArrNum + numberIntZ[z];
-    //shorthand
-    sumArrNum += numberIntZ[z]
+//case 4 : sum array 
+const num = [1, 2, 3, 4, 5];
+let sum = 0;
+for (let a = 0; a < num.length; a++){
+    sum = sum + num[a];
 };
-document.getElementById("loop-4").innerHTML = 'loop-4, print array numberIntZ : ' + sumArrNum;
+document.getElementById("loop-4").innerHTML = "loop-4, sum array : " + sum;
+
+//case 5 : create new array based array
+const num1 = [1,2,3,4,5];
+const numArr = [];
+let sum1 = 0;
+for (let i = 0; i < num1.length; i++){
+    numArr.push(num1[i] ** 2);
+}
+document.getElementById("loop-5").innerHTML = 'loop-5, creat array in array  : ' + numArr;
