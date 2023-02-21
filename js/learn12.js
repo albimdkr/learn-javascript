@@ -151,3 +151,25 @@ for (techFirst of techWeb){
     var accessFirst = (techFirst[0]);
     document.getElementById("forofloop-5").innerHTML = "forofloop-5, get only forst element : " + accessFirst;
 };
+
+//FOR BREAK AND CONTINUE LOOP
+//structure
+document.getElementById("structure-forbreakcontinueloop").innerHTML = "for(initialization; condition; increment){" + "<br>" + "if(condition){" + "<br>" + "break/continue" + "<br>" +  "};" + "<br>" + "console.log(var)" + "<br>" + "};";
+document.getElementById("structure-forbreakcontinueloop").style.fontWeight = "600";
+document.getElementById("structure-forbreakcontinueloop").style.textAlign = "left";
+
+//case 1 : break, forbreakloop interupt proses cause condition
+for (let myA = 0; myA <= 10; myA++){
+    if(myA == 5){
+        break
+    };
+    document.getElementById("forbreakloop-1").innerHTML ="forbreakloop-1, interupted myA == 5 : " + myA;
+};
+
+//case 2 : continue, forbreakloop continue to proses
+for (let myB = 0; myB <= 10; myB++){
+    if(myB == 5){
+        continue
+    };
+    document.getElementById("forcontinueloop-1").innerHTML ="forcontinueloop-1, continue the proses myB == 5 : " + myB;
+};
