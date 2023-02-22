@@ -32,7 +32,7 @@ function withReturn1 (){
     let a = 10;
     let b = 12;
     let total = a + b;
-    return total
+    return total;
 };
 document.getElementById("functionWithReturn-1").innerHTML = "with return total : " + withReturn1();
 
@@ -42,11 +42,22 @@ function withReturn2 (){
     let lastName = 'mudakar';
     let space = ' ';
     let fullName = firstName + space + lastName;
-    return fullName
+    return fullName;
 };
 document.getElementById("functionWithReturn-2").innerHTML = "with return fullname : " + withReturn2();
 
-//Funtion : With Paramater 
-function withParams (){
-
+//Funtion : With Paramater
+//case 1 : one argument/params
+function withParams1 (numA){
+    var total;
+    total = numA * numA;
+    return total;
 };
+document.getElementById("functionWithParams-1").innerHTML = "with one params, case 1 : " + withParams1(2);
+
+//case 2 : with math.PI
+function withParams2 (m){
+    var area = Math.PI * m;
+    return area;
+};
+document.getElementById("functionWithParams-2").innerHTML = "with one params, case 2 : " + withParams2(5);
