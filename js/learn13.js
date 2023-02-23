@@ -93,6 +93,29 @@ function withParamsTre2 (numA, numB, numC){
 };
 document.getElementById("functionWithParamsTre-2").innerHTML = 'with params tre calculate : ' + withParamsTre2(10,20,30);
 
+//case 4 : with many paramater
+function sumArray(arr){
+    let sum = 0;
+
+    for (var i = 0; i < arr.length; i++){
+        sum += arr[i];
+    };
+    return sum;
+};
+
+const numArr = [1,2,3,4,5];
+document.getElementById("functionWithManyParams-1").innerHTML ="with many params, sum : " + sumArray(numArr);
+
+
+
+
+
+
+
+
+
+
+
 //studycase : function with loop
 //case 1
 function generatePass(){
