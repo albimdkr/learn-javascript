@@ -107,6 +107,17 @@ const numArr = [1,2,3,4,5];
 document.getElementById("functionWithManyParams-1").innerHTML ="with many params, sum : " + sumArray(numArr);
 
 
+//case 4 : with argument
+function withArgument (){
+    let sumA = 0;
+    for (var i = 0; i < arguments.length; i++){
+        sumA += arguments[i];
+    };
+    return sumA;
+};
+
+document.getElementById("functionWithArgument-1").innerHTML = "With arguments : " + withArgument(1,2,3,4,5);
+
 
 
 
