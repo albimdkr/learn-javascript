@@ -115,16 +115,25 @@ function withArgument (){
     };
     return sumA;
 };
-
 document.getElementById("functionWithArgument-1").innerHTML = "With arguments : " + withArgument(1,2,3,4,5);
 
+//UNLIMITED FUNCTION 
+//case 1 : Unlimited number of parameters in regular function
+function sumAllNums1() {
+ console.log(arguments)
+};
+document.getElementById("functionUnlimited-1").innerHTML = "case 1 : " + sumAllNums1(1, 2, 3, 4);
 
+//case 2 : function declaration
+function sumAllNums2() {
+  let sum = 0
+  for (let i = 0; i < arguments.length; i++) {
+    sum += arguments[i]
+  }
+  return sum
+}
 
-
-
-
-
-
+document.getElementById("functionUnlimited-2").innerHTML = "case 2 : " + sumAllNums2(1, 2, 3, 4);
 
 
 //studycase : function with loop
