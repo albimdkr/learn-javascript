@@ -119,8 +119,10 @@ document.getElementById("functionWithArgument-1").innerHTML = "With arguments : 
 
 //UNLIMITED FUNCTION 
 //case 1 : Unlimited number of parameters in regular function
-function sumAllNums1() {
- console.log(arguments)
+function sumAllNums1(arguments) {
+    var num1 = 10;
+    var cal = (num1 + arguments);
+    //var called = arguments;
 };
 document.getElementById("functionUnlimited-1").innerHTML = "case 1 : " + sumAllNums1(1, 2, 3, 4);
 
@@ -131,9 +133,27 @@ function sumAllNums2() {
     sum += arguments[i]
   }
   return sum
+};
+document.getElementById("functionUnlimited-2").innerHTML = "case 2 : " + sumAllNums2(1, 2, 3, 4);
+
+//case 3 : Unlimited number of parameters in arrow function
+const sumAllNums3 = (...args) => {
+ console.log(args)
+}
+document.getElementById("functionUnlimited-3").innerHTML = "case 3 : " + sumAllNums3(1, 2, 3, 4);
+
+//case 4 : 
+const sumAllNums4 = (...args) => {
+  let sum = 0
+  for (const element of args) {
+    sum += element
+  }
+  return sum
 }
 
-document.getElementById("functionUnlimited-2").innerHTML = "case 2 : " + sumAllNums2(1, 2, 3, 4);
+//console.log(sumAllNums(1, 2, 3, 4)) // 10
+//console.log(sumAllNums(10, 20, 13, 40, 10))  // 93
+document.getElementById("functionUnlimited-4").innerHTML = "case 4 : " + (sumAllNums4(15, 20, 30, 25, 10, 33, 40))  // 173
 
 
 //studycase : function with loop
