@@ -265,4 +265,18 @@ var printLoop = n => {
 };
 console.log(printLoop(10));
 
+//case 3 : with arrow function
+const randomPass = length => {
+    var chars = 'abcefghijklmnopqrstuvwxyz';
+    var toLength = chars.length;
+    resultValue = '';
 
+    let c = 0;
+    while (c < length){
+        resultValue += chars.charAt(Math.floor(Math.random() * toLength));
+        c += 1;
+    };
+    return resultValue;
+};
+
+document.getElementById("studycase-4").innerHTML ="with arrow function random char : a" + randomPass(10);
