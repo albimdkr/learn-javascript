@@ -185,6 +185,32 @@ const squareNum2 = n => {
 };
 document.getElementById("arrowFunction-1").innerHTML = "arrow function : " + squareNum2(3);
 
+//case 2 : change to uppercase 
+const changeToUpperCase = arr => {
+    newArr = [];
+    for (const element of arr){
+        newArr.push(element.toUpperCase());
+    };
+    return newArr;
+};
+const os = ['Windows', 'Linux', 'MacOS'];
+document.getElementById("arrowFunction-2").innerHTML ="arrow function to uppercase : " + changeToUpperCase(os);
+
+//case 3 : print full name
+const printFullNameSinger = (firstName, lastName) => {
+    return `${firstName} ${lastName}`
+};
+document.getElementById("arrowFunction-3").innerHTML ="print full name use arrow function : " + printFullNameSinger('Kurt','Cobain');
+
+//DEFAULT PARAMATER
+//case 1 : print name
+const printMyName =  (name = 'Albi Mudakar') => {
+    let message = `Hello My Name is ${name}`;
+    return message;
+};
+document.getElementById("defaultParameter-1").innerHTML ="default params : " + printMyName();
+
+
 //studycase : function with loop
 //case 1
 function generatePass(){
@@ -225,5 +251,18 @@ function setValue (){
         output = '';
     };
 };
+
+//case 3 : with arrow function
+var printLoop = n => {
+    var result = '';
+    for (var i = 1; i <= n; i++){
+        for (var j = 1; j <= i; j++){
+            result += '*';
+        };
+        console.log(result);
+        result = '';
+    };
+};
+console.log(printLoop(10));
 
 
