@@ -142,7 +142,7 @@ const sumAllNums3 = (...args) => {
 }
 document.getElementById("functionUnlimited-3").innerHTML = "case 3 : " + sumAllNums3(1, 2, 3, 4);
 
-//case 4 : 
+//case 4 : in arrow function
 const sumAllNums4 = (...args) => {
   let sum = 0
   for (const element of args) {
@@ -155,6 +155,35 @@ const sumAllNums4 = (...args) => {
 //console.log(sumAllNums(10, 20, 13, 40, 10))  // 93
 document.getElementById("functionUnlimited-4").innerHTML = "case 4 : " + (sumAllNums4(15, 20, 30, 25, 10, 33, 40))  // 173
 
+
+//ANONYMOUS FUNCTION
+//case 1 : 
+const anonymousFunction = function (){
+    console.log("Im anonymous function")
+    //document.getElementById("anonymousFunction-1").innerHTML = "Im anonymous function";
+};
+document.getElementById("anonymousFunction-1").innerHTML = "Anonymous Function : " +  anonymousFunction;
+
+//EXPRESSION FUNCTION
+//case 1 : 
+const square1 = function(n){
+    return n * n;
+};
+document.getElementById("expressionFunction-1").innerHTML ="Expression Function : "  + square1(2);
+
+//SELF INVOKING FUNCTION
+//case 1 : Self invoking functions are anonymous functions which do not need to be called to return a value.
+let squareNum = (function(n){
+    return n * n;
+});(10)
+document.getElementById("selfInvokingFunction-1").innerHTML = "self invoking function : " + squareNum(5);
+
+//ARROW FUNCTION
+//case 1 : alternative to write function default
+const squareNum2 = n => {
+    return n * n;
+};
+document.getElementById("arrowFunction-1").innerHTML = "arrow function : " + squareNum2(3);
 
 //studycase : function with loop
 //case 1
