@@ -52,3 +52,18 @@ function printFullName (){
   };
   console.log("case 7 : " + areaOfCircle2(2, 3, 3));
   
+//case 8 : Circumference of a circle is calculated as follows: circumference = 2πr. Write a function which calculates circumOfCircle
+//formula : circumreference = 2 * PI * r
+function circumOfCircle (r){
+    var result;
+    var result = 2 * Math.PI * r;
+       return result;
+  };
+  console.log("case 9 : " + circumOfCircle(1));
+  
+  //case 9 : Density of a substance is calculated as follows:density= mass/volume. Write a function which calculates density.
+  function density (mass, volume){
+    var density = mass / volume;
+    return density;
+  };
+  console.log("case 9 : " + density(10, 2));
