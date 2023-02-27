@@ -133,3 +133,50 @@ console.log("case 15 : val1 = " + findMax(0, 10, 5));
 console.log("case 15 : val2 = " + findMax(0, -10, -2));
 
 //EXERCISE : LEVEL 2
+//case 1 : Linear equation is calculated as follows: ax + by + c = 0. Write a function which calculates value of a linear equation, solveLinEquation.
+function solveLinEquation (ax, by){
+  if (ax == 0){
+    if (by == 0){
+      console.log('Identify Equation');
+    }else {
+      console.log('Contantry Equation');
+    };
+  }else {
+    var c = -ax/by;
+    console.log("c : " + c);
+  };
+};
+console.log(solveLinEquation(10, 40));
+
+//case 2 : Quadratic equation is calculated as follows: ax2 + bx + c = 0. Write a function which calculates value or values of a quadratic equation, solveQuadEquation.
+function solveQuadEquation(a,b,c){
+  var discriminant = b * b - 4 * a * c;
+   if (discriminant > 0){
+     	root1 = (-b + Math.sqrt(discriminant)) / (2 * a);
+    	root2 = (-b - Math.sqrt(discriminant)) / (2 * a);
+      
+    	// result
+    	console.log(`The roots of quadratic equation are ${root1} and ${root2}`);
+    }else if (discriminant == 0){
+      root1 = root2 = -b / (2 * a);
+
+    	// result
+    	console.log(`The roots of quadratic equation are ${root1} and ${root2}`);
+ 
+    } else {
+    let realPart = (-b / (2 * a)).toFixed(2);
+    let imagPart = (Math.sqrt(-discriminant) / (2 * a)).toFixed(2);
+
+    // result
+    console.log(`The roots of quadratic equation are ${realPart} + ${imagPart}i and ${realPart} - ${imagPart}i`)
+	};
+};
+console.log(solveQuadEquation(10, 3, 5));
+
+//case 3 : Declare a function name printArray. It takes array as a parameter and it prints out each value of the array.
+function printArray (array){
+	for (var i = 0; i < array.length;i++){
+    console.log(i)
+  };
+};
+console.log(printArray('Albi Mudakar'));
