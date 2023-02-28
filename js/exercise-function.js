@@ -180,3 +180,44 @@ function printArray (array){
   };
 };
 console.log(printArray('Albi Mudakar'));
+
+//case 4 : Write a function name showDateTime which shows time in this format: 08/01/2020 04:08 using the Date object.
+function showDateTime(){
+  var gettingDate = new Date();
+  var getDateNow = (gettingDate.getDate());
+  var gettingMonth  = new Date();
+  var getMonthNow = (gettingMonth.getMonth());
+  var gettingYears = new Date();
+  var getYearsNow = (gettingYears.getFullYear());
+ 	
+  var gettingHours = new Date();
+  var getHoursNow = (gettingHours.getHours());
+  var gettingMinute = new Date ();
+  var getMinuteNow = (gettingMinute.getMinutes());
+  var gettingSecond = new Date();
+  var getSecondNow = (gettingSecond.getSeconds());
+
+	console.log(`${getDateNow}/${getMonthNow}/${getYearsNow}  ${getHoursNow} : ${getMinuteNow}`);
+  
+};
+console.log(showDateTime());
+
+//case 5 : Declare a function name swapValues. This function swaps value of x to y
+swapValues = (x,y) => {
+	var value1;
+  var value2;
+  //assigment = penugasan
+  value1 = x;
+  x = y;
+  y = value1;
+  console.log(`x =>${x}`);
+  console.log(`y =>${y}`);
+  
+  value2 = x;
+  x = (y + 2);
+  y = value2;
+  console.log(`x = ${x}`);
+  console.log(`y = ${y}`);
+  return value1, value2;
+};
+swapValues(3, 4, 4, 5);
