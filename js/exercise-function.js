@@ -221,3 +221,24 @@ swapValues = (x,y) => {
   return value1, value2;
 };
 swapValues(3, 4, 4, 5);
+
+//case 6 : Declare a function name reverseArray. It takes array as a parameter and it returns the reverse of the array (don't use method).
+// reverse 1,2,3,4,5
+reverseArray = (numArray) => {
+  var arrReverse = [];
+   for(var i = 0;numArray.length; i++){
+     arrReverse.push(numArray.pop());
+   };
+  return arrReverse
+};
+console.log(reverseArray([1,2,3,4,5]));
+
+//reverse 'A','B','C'
+reverseStrArray = (strArr) => {
+  var reverseStr= [];
+  for (var i = 0; strArr.length; i++){
+    reverseStr.push(strArr.pop());
+  };
+  return reverseStr;
+};
+console.log(reverseStrArray(['A', 'B', 'C']));
