@@ -280,3 +280,13 @@ const randomPass = length => {
 };
 
 document.getElementById("studycase-4").innerHTML ="with arrow function random char : a" + randomPass(10);
+
+//case 15 : Writ a function which generates a randomUserIp.
+ipRandom = () => {
+    var ip = +(Math.floor(Math.random() * 255)+1)+"."+(Math.floor(Math.random() * 255))+"."+(Math.floor(Math.random() * 255))+"."+(Math.floor(Math.random() * 255));
+    console.log(ip);
+    
+  };
+  
+  console.log(ipRandom());
+  

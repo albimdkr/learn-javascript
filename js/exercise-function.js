@@ -323,4 +323,21 @@ evensAndOdds = (numX) => {
 
 alert(evensAndOdds(100));
 
+// case 14 : Write a function which takes any number of arguments and return the sum of the arguments
+//1
+takesAnyNumber = (num1, num2, num3) => {
+  var sum;
+  sum = num1 + num2 + num3;
+  return sum;
+};
+
+console.log(takesAnyNumber(1,2,3));
+//2
+takesAnyNumber = (num1, num2, num3, num4) => {
+  var sum;
+  sum = num1+num2+num3+num4;
+  return sum;
+};
+console.log(takesAnyNumber(1,2,3,4));
+
 
