@@ -271,3 +271,56 @@ function deleteItem(x){
 };
 
 alert(deleteItem());
+
+//case 10 : Declare a function name sumOfNumbers. It takes a number parameter and it adds all the numbers in that range.
+sumOfNumber = (num1, num2) => {
+  var result;
+  result = (num1 + num2);
+  return result;
+};
+
+alert(sumOfNumber(2,2));
+
+//case 11 : Declare a function name sumOfOdds. It takes a number parameter and it adds all the odd numbers in that - range.
+sumOfOdds = (num1, num2) => {
+  var result;
+  result = num1 - num2;
+  return result;
+};
+alert(sumOfOdds(10, 7));
+//case 12 : Declare a function name sumOfEven. It takes a number parameter and it adds all the even numbers in that - range.
+
+//value of BEP = Break Even Points
+sumOfEven = (fiksCost, sellingCost, variableCost) => {
+  var result;
+  result = fiksCost / (sellingCost - variableCost);
+  return result;
+  console.log(result)
+};
+alert(sumOfEven(140, 95, 75));
+
+//case 13 : Declare a function name evensAndOdds . It takes a positive integer as parameter and it counts number of evens and odds in the number.
+evensAndOdds = (numX) => {
+	var resultOdds;
+  var resultEven;
+  var resultAll;
+  
+  resultOdds = numX / 2;
+  resultEven = resultOdds + 1;
+
+  
+  if (resultOdds == 50){
+    console.log("the number odds are : " + resultOdds);
+    return resultOdds;
+  } else if (resultEven == 51){
+    console.log("the number evens are : " + resultEven);
+    return resultEven;
+  } else {
+    console.log("sorry nothing")
+  };
+ 	
+};
+
+alert(evensAndOdds(100));
+
+
