@@ -242,3 +242,32 @@ reverseStrArray = (strArr) => {
   return reverseStr;
 };
 console.log(reverseStrArray(['A', 'B', 'C']));
+
+//case 7 : Declare a function name capitalizeArray. It takes array as a parameter and it returns the - capitalizedarray
+//with handler function
+var capitalizedArray = (x) => {
+  return x.toUpperCase();
+};
+console.log(capitalizedArray);
+
+var myArr = ['consistency', 'over', 'intencity'];
+myArr = myArr.map(capitalizedArray);
+
+//case 8 :  Declare a function name addItem. It takes an item parameter and it returns an array after adding the item
+function addItem (arr){
+  var myArr = [1,2,3];
+  myArr.push(arr);
+  return myArr;
+};
+
+alert(addItem(4));
+
+//case 9 : Declare a function name removeItem. It takes an index parameter and it returns an array after removing an item
+function deleteItem(x){
+  var myArr = [1,2,3];
+  var x = prompt('Enter thu num to delete');
+  delete myArr[x];
+  return myArr;
+};
+
+alert(deleteItem());
