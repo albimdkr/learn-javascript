@@ -58,7 +58,7 @@ function printFullName (){
 function circumOfCircle (r){
     var result;
     var result = 2 * Math.PI * r;
-       return result;
+    return result;
   };
   console.log("case 9 : " + circumOfCircle(1));
   
@@ -259,7 +259,6 @@ function addItem (arr){
   myArr.push(arr);
   return myArr;
 };
-
 alert(addItem(4));
 
 //case 9 : Declare a function name removeItem. It takes an index parameter and it returns an array after removing an item
@@ -269,7 +268,6 @@ function deleteItem(x){
   delete myArr[x];
   return myArr;
 };
-
 alert(deleteItem());
 
 //case 10 : Declare a function name sumOfNumbers. It takes a number parameter and it adds all the numbers in that range.
@@ -278,7 +276,6 @@ sumOfNumber = (num1, num2) => {
   result = (num1 + num2);
   return result;
 };
-
 alert(sumOfNumber(2,2));
 
 //case 11 : Declare a function name sumOfOdds. It takes a number parameter and it adds all the odd numbers in that - range.
@@ -320,7 +317,6 @@ evensAndOdds = (numX) => {
   };
  	
 };
-
 alert(evensAndOdds(100));
 
 // case 14 : Write a function which takes any number of arguments and return the sum of the arguments
@@ -340,15 +336,12 @@ takesAnyNumber = (num1, num2, num3, num4) => {
 };
 console.log(takesAnyNumber(1,2,3,4));
 
-
-
 //case 15 : Writ a function which generates a randomUserIp.
 ipRandom = () => {
   var ip = +(Math.floor(Math.random() * 255)+1)+"."+(Math.floor(Math.random() * 255))+"."+(Math.floor(Math.random() * 255))+"."+(Math.floor(Math.random() * 255));
   console.log(ip);
   
 };
-
 console.log(ipRandom());
 
 //case 16 : Write a function which generates a randomMacAddress
@@ -392,7 +385,6 @@ console.log(userIdGenerator());
 
 //Exercises: Level 3
 //case 1 : Modify the userIdGenerator function. Declare a function name userIdGeneratedByUser. It doesn’t take any parameter but it takes two inputs using prompt(). One of the input is the number of characters and the second input is the number of ids which are supposed to be generated.
-
 userIdGeneratorByUser = () => {
   var char = prompt('enter the number of character');
   //var id = prompt('enter the number of id');
@@ -412,10 +404,19 @@ userIdGeneratorByUser = () => {
 };
 userIdGeneratorByUser();
 
-
-
-
-
-
-
-
+//case 2 : Write a function name rgbColorGenerator and it generates rgb colors.
+rgbColorGenerator = () => {
+  var result1 = '';
+  var result2 = '';
+  var result3 = '';
+  var allNum = '1234567890';
+  var numToLength = allNum.length;
+  
+  for (var i = 0; i < 3; i++){
+    result1 += allNum.charAt(Math.floor(Math.random()* 255));
+    result2 += allNum.charAt(Math.floor(Math.random()* 255));
+    result3 += allNum.charAt(Math.floor(Math.random()* 255));
+  };
+  alert(`rgb (${result1}, ${result2}, ${result3})`);
+};
+console.log(rgbColorGenerator());
