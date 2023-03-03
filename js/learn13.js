@@ -290,3 +290,41 @@ ipRandom = () => {
   
   console.log(ipRandom());
   
+//case 16 : Write a function which generates a randomMacAddress
+"XX:XX:XX:XX:XX:XX".replace(/X/g, function(){
+    return "1234567890ABCDE".charAt(Math.floor(Math.random() * 16));
+});
+
+  //case 17 : Declare a function name randomHexaNumberGenerator. When this function is called it generates a random hexadecimal number. The function return the hexadecimal number.
+  //method 1
+randomHexaGenerator  = () => {
+    var result = '';
+    var hexaAll = 'abcdef1234567890';
+    var hexaAllTolength = hexaAll.length;
+    
+    for (var i = 0;i <6; i += 1){
+      result += hexaAll.charAt(Math.floor(Math.random() * hexaAllTolength)); 
+    };
+    console.log(`#${result}`)    
+};
+randomHexaGenerator();
+
+//method 2
+var randomHex = () => {
+    var n = (Math.random() * 0xfffff * 100000).toString(16);
+    return '#' + n.slice(0, 6);
+  };
+console.log(randomHex());
+
+//case 18 : Declare a function name userIdGenerator. When this function is called it generates seven character id. The function return the id.
+userIdGenerator = () => {
+ var result = '';
+ var charAll = 'ABCDEFGHIabcdefghi1234567890';
+ var charLength = charAll.length;
+ 
+ for (var i = 0; i < 7; i++){
+   result += charAll.charAt(Math.floor(Math.random() * charLength));
+ };
+ return result;
+};
+console.log(userIdGenerator());
