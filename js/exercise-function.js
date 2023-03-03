@@ -341,3 +341,81 @@ takesAnyNumber = (num1, num2, num3, num4) => {
 console.log(takesAnyNumber(1,2,3,4));
 
 
+
+//case 15 : Writ a function which generates a randomUserIp.
+ipRandom = () => {
+  var ip = +(Math.floor(Math.random() * 255)+1)+"."+(Math.floor(Math.random() * 255))+"."+(Math.floor(Math.random() * 255))+"."+(Math.floor(Math.random() * 255));
+  console.log(ip);
+  
+};
+
+console.log(ipRandom());
+
+//case 16 : Write a function which generates a randomMacAddress
+"XX:XX:XX:XX:XX:XX".replace(/X/g, function(){
+  return "1234567890ABCDE".charAt(Math.floor(Math.random() * 16));
+});
+
+//case 17 : Declare a function name randomHexaNumberGenerator. When this function is called it generates a random hexadecimal number. The function return the hexadecimal number.
+//method 1
+randomHexaGenerator  = () => {
+  var result = '';
+  var hexaAll = 'abcdef1234567890';
+  var hexaAllTolength = hexaAll.length;
+  
+  for (var i = 0;i <6; i += 1){
+    result += hexaAll.charAt(Math.floor(Math.random() * hexaAllTolength)); 
+  };
+  console.log(`#${result}`)    
+};
+randomHexaGenerator();
+
+//method 2
+var randomHex = () => {
+  var n = (Math.random() * 0xfffff * 100000).toString(16);
+  return '#' + n.slice(0, 6);
+};
+console.log(randomHex());
+
+//case 18 : Declare a function name userIdGenerator. When this function is called it generates seven character id. The function return the id.
+userIdGenerator = () => {
+var result = '';
+var charAll = 'ABCDEFGHIabcdefghi1234567890';
+var charLength = charAll.length;
+
+for (var i = 0; i < 7; i++){
+ result += charAll.charAt(Math.floor(Math.random() * charLength));
+};
+return result;
+};
+console.log(userIdGenerator());
+
+//Exercises: Level 3
+//case 1 : Modify the userIdGenerator function. Declare a function name userIdGeneratedByUser. It doesn’t take any parameter but it takes two inputs using prompt(). One of the input is the number of characters and the second input is the number of ids which are supposed to be generated.
+
+userIdGeneratorByUser = () => {
+  var char = prompt('enter the number of character');
+  //var id = prompt('enter the number of id');
+  
+  var resultChar = '';
+  //var resultId = '';
+  var allId = '1234567890'
+  var allChar = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  var charToLength = allChar.length;
+  
+  for (var i = 0; i < char; i++){
+    resultChar += allChar.charAt(Math.floor(Math.random() * charToLength));
+    //resultId += allId.charAt(Math.floor(Math.random() * allId));
+  };
+  
+  return resultChar;
+};
+userIdGeneratorByUser();
+
+
+
+
+
+
+
+
