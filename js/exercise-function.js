@@ -420,3 +420,21 @@ rgbColorGenerator = () => {
   alert(`rgb (${result1}, ${result2}, ${result3})`);
 };
 console.log(rgbColorGenerator());
+
+//case 3 : Write a function arrayOfHexaColors which return any number of hexadecimal colors in an array.
+
+var arrayOfHexaColor = () => {
+  var allHexa = '1234567890abcde';
+  var loopCount = parseInt(Math.random() * 50);
+  var hexColorArr = [];
+  
+  for (var i = 0; i < loopCount; i++){
+    var hexChar = [];
+    for (var y = 0; y < 6; y++){
+      hexChar.push(allHexa[parseInt(Math.random() * allHexa.length) - 1]);
+    };
+    hexColorArr.push('rgb ' + '#' + hexChar.join(''));
+  };
+  return hexColorArr;
+};
+console.log(arrayOfHexaColor());
