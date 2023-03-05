@@ -406,23 +406,23 @@ userIdGeneratorByUser();
 
 //case 2 : Write a function name rgbColorGenerator and it generates rgb colors.
 rgbColorGenerator = () => {
-  var result1 = '';
-  var result2 = '';
-  var result3 = '';
+  var r = '';
+  var g = '';
+  var b = '';
   var allNum = '1234567890';
   var numToLength = allNum.length;
   
   for (var i = 0; i < 3; i++){
-    result1 += allNum.charAt(Math.floor(Math.random()* 255));
-    result2 += allNum.charAt(Math.floor(Math.random()* 255));
-    result3 += allNum.charAt(Math.floor(Math.random()* 255));
+    r += allNum.charAt(Math.floor(Math.random()* 255));
+    g += allNum.charAt(Math.floor(Math.random()* 255));
+    b += allNum.charAt(Math.floor(Math.random()* 255));
   };
   alert(`rgb (${result1}, ${result2}, ${result3})`);
 };
 console.log(rgbColorGenerator());
 
 //case 3 : Write a function arrayOfHexaColors which return any number of hexadecimal colors in an array.
-
+//case 4 : Write a function arrayOfRgbColors which return any number of RGB colors in an array.
 var arrayOfHexaColor = () => {
   var allHexa = '1234567890abcde';
   var loopCount = parseInt(Math.random() * 50);
@@ -433,8 +433,29 @@ var arrayOfHexaColor = () => {
     for (var y = 0; y < 6; y++){
       hexChar.push(allHexa[parseInt(Math.random() * allHexa.length) - 1]);
     };
-    hexColorArr.push('rgb ' + '#' + hexChar.join(''));
+    hexColorArr.push('#' + hexChar.join(''));
   };
   return hexColorArr;
 };
 console.log(arrayOfHexaColor());
+
+//case 4 : Write a function arrayOfRgbColors which return any number of RGB colors in an array.
+var arrayOfRgbColors = () => {
+	var newArr = [];
+  var allNum = '1234567890';
+  var loopCount = parseInt(Math.random() * 255);
+  
+  for (var i = 0; i < loopCount; i++){
+    var r = [];
+    var g = [];
+    var b = [];
+    for (var j = 0; i < 3; j++){
+      r.push(allNum[parseInt(Math.random() * allNum.length)-1]);
+      //g.push(allNum[parseInt(Math.random() * allNum.length)]);
+      //b.push(allNum[parseInt(Math.random() * allNum.length)]);
+    };
+    newArr.push('#' + r.join(''));
+  };
+  return newArr;
+};
+console.log(arrayOfRgbColors());
