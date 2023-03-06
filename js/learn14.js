@@ -195,4 +195,21 @@ const address = Object.keys(copyPerson.address);
 console.log(address)
 document.getElementById('object-8').innerHTML = 'on console.log(object-8)';
 
+//case 8
+//Getting object values using Object.values()
+//Object.values : To get values of as an array 
+const values = Object.values(copyPerson);
+console.log(values);
+document.getElementById('object-9').innerHTML = 'on console.log(object-9)';
 
+//case 9
+//Getting object keys and values using Object.entries()
+//Object.entries : to get the keys and values in array
+const entries = Object.entries(copyPerson);
+console.log(entries);
+
+//case 10
+//Checking properties using hasOwnProperty()
+//hasOwnProperties() : to check if a specific key or properties exist in a object
+console.log(copyPerson.hasOwnProperty('firstName')); 
+console.log(copyPerson.hasOwnProperty('score'));
