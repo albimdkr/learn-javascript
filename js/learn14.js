@@ -185,6 +185,14 @@ const copyPerson = Object.assign({}, person3);
 console.log(copyPerson);
 document.getElementById('object-6').innerHTML = 'on console.log(object-6)';
 
-
+//case 7
+//Getting object keys using Object.keys()
+//Object.keys : to get the keys or properties of an obejct as an array
+const keys = Object.keys(copyPerson);
+console.log(keys);
+document.getElementById('object-7').innerHTML = 'on console.log(object-7)';
+const address = Object.keys(copyPerson.address);
+console.log(address)
+document.getElementById('object-8').innerHTML = 'on console.log(object-8)';
 
 
