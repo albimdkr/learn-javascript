@@ -157,6 +157,33 @@ person2.getPersonInfo = function() {
 console.log(person2);
 console.log(person2.getPersonInfo());
 
+// case 6
+//OBJECT METHOD
+const person3 = {
+    case : 'case 6',
+    firstName : 'Albi',
+    lastName : 'Mudakar',
+    age : 24,
+    country : 'waka land',
+    city : 'numerouno',
+    skils : ['HTML', 'CSS', 'JavaScript'],
+    title : 'student',
+    address : {
+        street : 'jl.wano',
+        pobox : 2020,
+        city : 'numereuno'
+    },
+    getPersonInfo : function (){
+        return `i am an ${this.firstName} and i live in ${this.city}, ${this.country}. I an ${this.age}.`
+    }
+};
+
+
+//Object method : object.assign, object.keys, object.values, object.entries
+//hasOwnProperty
+const copyPerson = Object.assign({}, person3);
+console.log(copyPerson);
+document.getElementById('object-6').innerHTML = 'on console.log(object-6)';
 
 
 
