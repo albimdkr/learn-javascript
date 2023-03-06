@@ -70,7 +70,7 @@ for (let i = 0; i < 3; i++){
 
 //OBJECT 
 //Creating an empty object
-//const person = [];
+//const person = {};
 
 //Creating an object with values
 //case 1
