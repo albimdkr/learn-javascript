@@ -97,6 +97,7 @@ var users = {
 //case 1 : Find the person who has many skills in the users object.
 console.log(users.Asab);
 
+
 //case 2 : Count logged in users, count users having greater than equal to 50 points from the following object.
 var login = 0;
 var count = 0;
@@ -109,3 +110,10 @@ for (user in users){
 };
 console.log(`user loggedIn is : ${login}`);
 console.log(`user haver grater 50 points is : ${count}`);
+
+
+//case 3 : Find people who are MERN stack developer from the users object
+var userSkills = users[user].skills;
+if (userSkills.includes("CSS", "HTML", "React", "Redux")){
+  console.log(`${user} is developer MERN stack`);
+};
