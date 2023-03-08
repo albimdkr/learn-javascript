@@ -127,3 +127,25 @@ copyUsers.age = 29;
 copyUsers.isLoggedIn = true;
 copyUsers.points = 50;
 console.log(copyUsers);
+
+//case 5 : Get all keys or properties of users object
+var copyUsers2 = Object.keys(copyUsers);
+console.log(copyUsers2);
+
+//case 6 : Get all values of users object
+var newValues = Object.values(copyUsers);
+console.log(newValues);
+
+
+//case 7 : Use the countries object to print a country name, capital, populations and languages.
+users.countries = 'Indonesia';
+console.log(users);
+
+users.countries = function (){
+  var country = 'Indonesia';
+  var capital = 'Jakarta';
+  var population = '273.8 Millions';
+  var languages = 'Bahasa Indonesia';
+  return `country : ${country}  capital : ${capital}  population : ${population}  languages : ${languages}`;
+};
+console.log(users.countries());
