@@ -117,3 +117,13 @@ var userSkills = users[user].skills;
 if (userSkills.includes("CSS", "HTML", "React", "Redux")){
   console.log(`${user} is developer MERN stack`);
 };
+
+//case 4 : Set your name in the users object without modifying the original users object
+var copyUsers = Object.assign({}, users);
+copyUsers.albi;
+copyUsers.email = 'albi@gmail.com';
+copyUsers.skills = ['HTML', 'CSS', 'JS'];
+copyUsers.age = 29;
+copyUsers.isLoggedIn = true;
+copyUsers.points = 50;
+console.log(copyUsers);
