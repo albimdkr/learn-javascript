@@ -213,3 +213,98 @@ console.log(entries);
 //hasOwnProperties() : to check if a specific key or properties exist in a object
 console.log(copyPerson.hasOwnProperty('firstName')); 
 console.log(copyPerson.hasOwnProperty('score'));
+
+
+// case 2 : **** Questions:2, 3 and 4 are based on the following two arrays:users and products
+
+var userss = [
+    {
+        _id: 'ab12ex',
+        username: 'Alex',
+        email: 'alex@alex.com',
+        password: '123123',
+        createdAt:'08/01/2020 9:00 AM',
+        isLoggedIn: false
+    },
+    {
+        _id: 'fg12cy',
+        username: 'Asab',
+        email: 'asab@asab.com',
+        password: '123456',
+        createdAt:'08/01/2020 9:30 AM',
+        isLoggedIn: true
+    },
+    {
+        _id: 'zwf8md',
+        username: 'Brook',
+        email: 'brook@brook.com',
+        password: '123111',
+        createdAt:'08/01/2020 9:45 AM',
+        isLoggedIn: true
+    },
+    {
+        _id: 'eefamr',
+        username: 'Martha',
+        email: 'martha@martha.com',
+        password: '123222',
+        createdAt:'08/01/2020 9:50 AM',
+        isLoggedIn: false
+    },
+    {
+        _id: 'ghderc',
+        username: 'Thomas',
+        email: 'thomas@thomas.com',
+        password: '123333',
+        createdAt:'08/01/2020 10:00 AM',
+        isLoggedIn: true
+    }
+    ];
+
+//a : Create a function called signUp which allows user to add to the collection. If user exists, inform the user that he has already an account.
+
+userss.signUp = function (){
+  
+  var newObj = {
+    _id : '1212',
+    username : 'albi',
+    email : 'albi@gmail.com',
+    password : 'pas123',
+    createdAt : '08/01/2020 10:00 AM',
+    isLoggedIn : false
+ };
+
+var signUp = 0;
+for (user in userss){
+ if (user != userss._id){
+   userss.push(newObj);
+   console.log(userss);
+   console.log('Signup Success');
+ } else {
+   console.log('Denied, user has already!');
+ };
+};
+};
+
+// userss.signUp = function (id, username, email, password, createdAt, isLoggedIn){
+//   var addId = userss.id;
+//   var addUsername = userss.username;
+//   var addEmail = userss.email;
+//   var addPassword = userss.password;
+//   var addCreatedAt = userss.createdAt;
+//   var addIsLoggedIn = userss.isLoggedin;
+//   var all = addId + addUsername + addEmail + addPassword + addCreatedAt + addIsLoggedIn;
+//   return all;
+// };
+// console.log(signUp('1212', 'Albi', 'albi@gmail.com', '131313', '08/01/2020 10:00 AM', 'false'));
+
+// var user = 0;
+// var signUp = 0;
+
+// for (user in userss){
+//   if (userss[user].isLoggedIn){
+//     signUp++;
+//   };
+// };
+// console.log(`${signUp}`);
+
+//b : Create a function called signIn which allows user to sign in to the application
