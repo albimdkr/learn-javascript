@@ -149,3 +149,25 @@ users.countries = function (){
   return `country : ${country}  capital : ${capital}  population : ${population}  languages : ${languages}`;
 };
 console.log(users.countries());
+
+// LEVEL  : 3
+// case 1 :  Create an object literal called personAccount. It has firstName, lastName, incomes, expenses properties and it has totalIncome, totalExpense, accountInfo,addIncome, addExpense and accountBalance methods. Incomes is a set of incomes and its description and expenses is a set of incomes and its description.
+
+var personAccount = {
+  firstName : 'Albi',
+  lastName : 'Mudakar',
+  incomes : 25000,
+ 	expense : 20000,
+  accountInfo : {
+    username : 'albi',
+    address : 'wakaland'
+  },
+  totalIncomeExpense : function (){
+    return `${this.incomes} + ${this.expense}`;
+  },
+  isTrial : false,
+};
+console.log(personAccount);
+console.log(personAccount.totalIncomeExpense());
+
+
