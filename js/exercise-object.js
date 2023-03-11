@@ -216,12 +216,54 @@ var userss = [
   }
   ];
 
-var user = 0;
-var signUp = 0;
 
-for (user in userss){
-if (userss[user].isLoggedIn){
-  signUp++;
-};
-};
-console.log(`${signUp}`);
+// case 2 : **** Questions:2, 3 and 4 are based on the following two arrays:users and products
+//a : Create a function called signUp which allows user to add to the collection. If user exists, inform the user that he has already an account.
+
+userss.signUp = function (){
+  var signUp = 0;
+  for (user in userss){
+   if (user == userss._id){
+     console.log('Denied, user has already!');
+   } else {
+     userss.push(newObj);
+     //console.log(userss);
+     console.log('Signup Success');
+     signUp++;
+   };
+   console.log(userss);
+  };
+  };
+  var newObj = {
+      _id : 'ghderc',
+      name : 'UJANGGG',
+      email : 'thomas@thomas.com',
+      password : '123333',
+      createdAt : '08/01/2020 10:00 AM',
+      isLoggedIn : true
+   };
+  console.log(userss.signUp(newObj));
+
+// userss.signUp = function (id, username, email, password, createdAt, isLoggedIn){
+//   var addId = userss.id;
+//   var addUsername = userss.username;
+//   var addEmail = userss.email;
+//   var addPassword = userss.password;
+//   var addCreatedAt = userss.createdAt;
+//   var addIsLoggedIn = userss.isLoggedin;
+//   var all = addId + addUsername + addEmail + addPassword + addCreatedAt + addIsLoggedIn;
+//   return all;
+// };
+// console.log(signUp('1212', 'Albi', 'albi@gmail.com', '131313', '08/01/2020 10:00 AM', 'false'));
+
+// var user = 0;
+// var signUp = 0;
+
+// for (user in userss){
+//   if (userss[user].isLoggedIn){
+//     signUp++;
+//   };
+// };
+// console.log(`${signUp}`);
+
+//b : Create a function called signIn which allows user to sign in to the application
