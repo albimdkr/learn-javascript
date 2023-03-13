@@ -37,3 +37,13 @@ console.log("hight order function : " + highOrderr(2)(3)(10));
 document.getElementById("returningFunction-2").innerHTML = "returning function : " + normalFunction(2,3,10); 
 
 //Method : forEach
+const numbers = [1,2,3,4,5];
+const sumArray = arr => {
+    let sum = 0;
+    const callback = function(element){
+        sum += element
+    };
+    arr.forEach(callback);
+    return sum
+};
+console.log("method forEach sumArray : "+ sumArray(numbers));
