@@ -66,8 +66,14 @@ document.getElementById("returningFunction-4").innerHTML = "forEach simplified :
 // setInterval
 function sayHallo(){
     console.log('Hello');
+    document.getElementById("settingTime-1").innerHTML = "setInterval 1000";
 };
 setInterval(sayHallo, 1000);
-document.getElementById("settingTime-1").innerHTML = "setInterval 1000 : "+ setInterval(sayHallo, 1000);
+
 
 // setTimeout
+function halloWorld (){
+ console.log('Hello World');
+ document.getElementById("settingTime-2").innerHTML = "setTimeout 2000";
+};
+setTimeout(halloWorld, 2000);
