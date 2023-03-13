@@ -47,3 +47,14 @@ const sumArray = arr => {
     return sum
 };
 console.log("method forEach sumArray : "+ sumArray(numbers));
+
+//can be simplified
+const numberss = [1,2,3,4,5];
+const sumArrayy = arr => {
+    let sum = 0;
+    arr.forEach(function(element){
+        sum += element
+    });
+    return sum;
+};
+console.log("forEach simplified : " + sumArrayy(numberss));
