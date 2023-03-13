@@ -46,7 +46,8 @@ const sumArray = arr => {
     arr.forEach(callback);
     return sum
 };
-console.log("method forEach sumArray : "+ sumArray(numbers));
+console.log("method forEach sumArray : " + sumArray(numbers));
+document.getElementById("returningFunction-3").innerHTML = "method forEach : " + sumArray(numbers);
 
 //can be simplified
 const numberss = [1,2,3,4,5];
@@ -58,3 +59,15 @@ const sumArrayy = arr => {
     return sum;
 };
 console.log("forEach simplified : " + sumArrayy(numberss));
+document.getElementById("returningFunction-4").innerHTML = "forEach simplified : " + sumArrayy(numberss);
+
+
+//Setting Time
+// setInterval
+function sayHallo(){
+    console.log('Hello');
+};
+setInterval(sayHallo, 1000);
+document.getElementById("settingTime-1").innerHTML = "setInterval 1000 : "+ setInterval(sayHallo, 1000);
+
+// setTimeout
