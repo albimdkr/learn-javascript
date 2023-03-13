@@ -21,6 +21,7 @@ var normalFunction = (n,m,t) => {
     // 2*2=4, 3*3=9, 9+4=(13)+10=23; 
 };
 console.log("normal function : "+ normalFunction(2,3,10));
+document.getElementById("returningFunction-1").innerHTML = "normal function : " + normalFunction(2,3,10); 
 
 //Higher order functions return function as a value ​
 var highOrderr = n => {
@@ -33,3 +34,6 @@ var highOrderr = n => {
     return doSomething;
 };
 console.log("hight order function : " + highOrderr(2)(3)(10));
+document.getElementById("returningFunction-2").innerHTML = "returning function : " + normalFunction(2,3,10); 
+
+//Method : forEach
