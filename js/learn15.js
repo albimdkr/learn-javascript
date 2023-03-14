@@ -77,3 +77,32 @@ function halloWorld (){
  document.getElementById("settingTime-2").innerHTML = "setTimeout 2000";
 };
 setTimeout(halloWorld, 2000);
+
+
+//FUNCTIONAL PROGRAMMING
+// In this section, we will see forEach, map, filter, reduce, find, every, some, and sort.
+
+//forEach
+//Iterate array element
+//strukture
+// arr.forEach(function (element, index, arr){
+//     console.log(index, element, arr);
+// });
+//example
+var sum = 0;
+var numberArray = [
+    'forEach',
+    1,
+    2,
+    3,
+    4,
+    5
+];
+numberArray.forEach(num => console.log(num));
+console.log(sum);
+newArr = [];
+sum = newArr;
+document.getElementById("functionalProgramming-1").innerHTML = "forEach method : console.log";
+
+
+
