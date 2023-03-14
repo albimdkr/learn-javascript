@@ -68,7 +68,7 @@ function sayHallo(){
     console.log('Hello');
     document.getElementById("settingTime-1").innerHTML = "setInterval 1000";
 };
-setInterval(sayHallo, 1000);
+setInterval(sayHallo, 10);
 
 
 // setTimeout
@@ -76,7 +76,7 @@ function halloWorld (){
  console.log('Hello World');
  document.getElementById("settingTime-2").innerHTML = "setTimeout 2000";
 };
-setTimeout(halloWorld, 2000);
+setTimeout(halloWorld, 10);
 
 
 //FUNCTIONAL PROGRAMMING
@@ -103,6 +103,15 @@ console.log(sum);
 newArr = [];
 sum = newArr;
 document.getElementById("functionalProgramming-1").innerHTML = "forEach method : console.log";
+// with operator +=
+var sum1 = 0;
+var numOfArray = [1,2,3,4,5];
+numOfArray.forEach(num => sum1 += num);
+console.log(sum1); 
+//with toUpperCase()
+var countries = ['Findland', 'Denmark', 'Indonesia', 'Japan'];
+countries.forEach((element) => console.log(element.toUpperCase()));
+
 
 
 
