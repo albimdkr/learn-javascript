@@ -83,7 +83,7 @@ setTimeout(halloWorld, 10);
 // In this section, we will see forEach, map, filter, reduce, find, every, some, and sort.
 
 //forEach
-//Iterate array element
+//Iterate array element We use forEach only with arrays
 //strukture
 // arr.forEach(function (element, index, arr){
 //     console.log(index, element, arr);
@@ -100,8 +100,6 @@ var numberArray = [
 ];
 numberArray.forEach(num => console.log(num));
 console.log(sum);
-newArr = [];
-sum = newArr;
 document.getElementById("functionalProgramming-1").innerHTML = "forEach method : console.log";
 // with operator +=
 var sum1 = 0;
@@ -112,6 +110,25 @@ console.log(sum1);
 var countries = ['Findland', 'Denmark', 'Indonesia', 'Japan'];
 countries.forEach((element) => console.log(element.toUpperCase()));
 
-
+//MAP
+//Iterate an array elements and modify the array elements. callback element array params and return new array
+//strukture
+// var modifiedArray = arr.map(function(element, index, arr){
+//     return element;
+// });
+//example
+var numbers2 = [1,2,3,4,5];
+var numbersSquare = numbers2.map((num) => num * num);
+console.log(numbersSquare);
+document.getElementById("functionalProgramming-2").innerHTML = 'map method : console.log';
+//with toUpperCase
+var os = ['macOs', 'Android', 'Linux', 'Windows'];
+var osToUpperCase = os.map((osName) => osName.toUpperCase());
+console.log(osToUpperCase);
+//with slice
+var osFirstThreeLetters = os.map((osName) => 
+    osName.toUpperCase().slice(0, 3)
+)
+console.log(osFirstThreeLetters);
 
 
