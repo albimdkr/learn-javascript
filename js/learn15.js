@@ -122,7 +122,7 @@ var numbersSquare = numbers2.map((num) => num * num);
 console.log(numbersSquare);
 document.getElementById("functionalProgramming-2").innerHTML = 'map method : console.log';
 //with toUpperCase
-var os = ['macOs', 'Android', 'Linux', 'Windows'];
+var os = ['macOS', 'centOS', 'Android', 'Linux', 'Windows'];
 var osToUpperCase = os.map((osName) => osName.toUpperCase());
 console.log(osToUpperCase);
 //with slice
@@ -130,5 +130,14 @@ var osFirstThreeLetters = os.map((osName) =>
     osName.toUpperCase().slice(0, 3)
 )
 console.log(osFirstThreeLetters);
+
+//FILTER
+// Filter out items which full fill filtering condition and return a new array
+var osContainingOS = os.filter((os) => 
+    os.includes('OS')
+);
+console.log(osContainingOS);
+document.getElementById('functionalProgramming-3').innerHTML = 'filter method : ' + osContainingOS ;
+//output is macOS and centOS cause filter 'OS'
 
 
