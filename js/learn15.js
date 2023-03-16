@@ -122,7 +122,7 @@ var numbersSquare = numbers2.map((num) => num * num);
 console.log(numbersSquare);
 document.getElementById("functionalProgramming-2").innerHTML = 'map method : console.log';
 //with toUpperCase
-var os = ['macOS', 'centOS', 'Android', 'Linux', 'Windows'];
+var os = ['macOS', 'centOS', 'Android', 'Linux', 'Windows',];
 var osToUpperCase = os.map((osName) => osName.toUpperCase());
 console.log(osToUpperCase);
 //with slice
@@ -136,8 +136,24 @@ console.log(osFirstThreeLetters);
 var osContainingOS = os.filter((os) => 
     os.includes('OS')
 );
-console.log(osContainingOS);
+console.log(osContainingOS);//output is macOS and centOS cause filter 'OS'
 document.getElementById('functionalProgramming-3').innerHTML = 'filter method : ' + osContainingOS ;
-//output is macOS and centOS cause filter 'OS'
-
-
+//with endWith 'ia'
+var countryAsia = ['indonesia', 'malayasia', 'brunei', 'thailand', 'singapure'];
+var countryEndsByIa = countryAsia.filter((countryAsia) => countryAsia.endsWith('ia'));
+console.log(countryEndsByIa);//ouput indonesIA and malaysIA
+//with length
+var countriesNineLetters = countryAsia.filter(
+    (countryAsia) => countryAsia.length === 9
+)
+console.log(countriesNineLetters);//ouput indonesia, malayasia and singapure
+//with object in array and operator comparation
+var scores = [
+    {name: 'Adi', score:80 },
+    {name: 'Idi', score:90 },
+    {name: 'Udi', score:100},
+    {name: 'Edi', score:70 },
+    {name: 'Odo', score:67 }
+];
+var scoreGreaterNighty = scores.filter((score) => score.score > 70)
+console.log(scoreGreaterNighty);
