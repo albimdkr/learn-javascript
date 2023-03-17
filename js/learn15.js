@@ -184,3 +184,15 @@ console.log("find : " + cekAges);//output : yes it is 32
 var allNames = ['Elliot', 'Darline', 'TyrelWellick', 'WhiteRose'];
 var resultNames = allNames.find((allNames) => allNames.length == 6);//cek the length or letter has 6 ?
 console.log(resultNames); //output : it is elliote, cause have length = 6
+
+//FINDEINDEX
+//Return the position of the first element which satisfies the condition
+var namesAll = ['Elliot', 'Darline', 'TyrelWellick', 'WhiteRose'];
+var ageAll = [24, 22, 25, 32, 35, 18];
+
+var namesResult = namesAll.findIndex((namesAll) => namesAll.length > 7);
+console.log("findIndex, nameResult : " + namesResult);
+document.getElementById("functionalProgramming-5").innerHTML = "findIndex method : console.log";
+
+var ageResult = ageAll.findIndex((ageAll) => ageAll < 20);
+console.log("findIndex, ageResult : " + ageResult); 
