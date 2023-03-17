@@ -168,3 +168,9 @@ var numbersOfSum = [1,2,3,4,5];
 var sumNumber = numbersOfSum.reduce((acc, cur) => acc + cur, 0);
 console.log(sumNumber)
 document.getElementById("functionalProgramming-4").innerHTML = 'reduce method : ' + sumNumber;
+
+//EVERY
+//Check if all the elements are similar in one aspect. It returns boolean
+var namess = ['adel', 'adil', 'udal', 12];
+var cekAllStr = namess.every((namee) => typeof namee === 'string')//all are string ??
+console.log("every : "+ cekAllStr);//output false cause in array names have 12
