@@ -157,3 +157,14 @@ var scores = [
 ];
 var scoreGreaterNighty = scores.filter((score) => score.score > 70)
 console.log(scoreGreaterNighty);
+
+//REDUCE
+// Reduce takes a callback function. The call back function takes accumulator, current, and optional initial value as a parameter and returns a single value.
+// arr.reduce((acc, cur) => {
+//     //some operations goes here before returnnong a value
+//     return
+// }, initialValue);
+var numbersOfSum = [1,2,3,4,5];
+var sumNumber = numbersOfSum.reduce((acc, cur) => acc + cur, 0);
+console.log(sumNumber)
+document.getElementById("functionalProgramming-4").innerHTML = 'reduce method : ' + sumNumber;
