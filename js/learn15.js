@@ -180,3 +180,7 @@ console.log("every : "+ cekAllStr);//output false cause in array names have 12
 var ages = [24, 22, 25, 32, 35, 18];
 var cekAges = ages.find((cekAges) => cekAges > 30); //cek grater than 30?
 console.log("find : " + cekAges);//output : yes it is 32
+//with letter name
+var allNames = ['Elliot', 'Darline', 'TyrelWellick', 'WhiteRose'];
+var resultNames = allNames.find((allNames) => allNames.length == 6);//cek the length or letter has 6 ?
+console.log(resultNames); //output : it is elliote, cause have length = 6
