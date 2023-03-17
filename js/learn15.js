@@ -174,3 +174,9 @@ document.getElementById("functionalProgramming-4").innerHTML = 'reduce method : 
 var namess = ['adel', 'adil', 'udal', 12];
 var cekAllStr = namess.every((namee) => typeof namee === 'string')//all are string ??
 console.log("every : "+ cekAllStr);//output false cause in array names have 12
+
+//FIND
+//Return the first element which satisfies the condition
+var ages = [24, 22, 25, 32, 35, 18];
+var cekAges = ages.find((cekAges) => cekAges > 30); //cek grater than 30?
+console.log("find : " + cekAges);//output : yes it is 32
