@@ -68,7 +68,7 @@ function sayHallo(){
     console.log('Hello');
     document.getElementById("settingTime-1").innerHTML = "setInterval 1000";
 };
-setInterval(sayHallo, 10);
+//setInterval(sayHallo, 10);
 
 
 // setTimeout
@@ -76,7 +76,7 @@ function halloWorld (){
  console.log('Hello World');
  document.getElementById("settingTime-2").innerHTML = "setTimeout 2000";
 };
-setTimeout(halloWorld, 10);
+//setTimeout(halloWorld, 10);
 
 
 //FUNCTIONAL PROGRAMMING
@@ -196,3 +196,13 @@ document.getElementById("functionalProgramming-5").innerHTML = "findIndex method
 
 var ageResult = ageAll.findIndex((ageAll) => ageAll < 20);
 console.log("findIndex, ageResult : " + ageResult); 
+
+//SOME
+//Check if some of the elements are similar in one aspect. It returns boolean
+var namess = ['Albi', 'Alen', 'Alun', 'Elon'];
+var bools = [true, true, true, true];
+var areSomeTrue = bools.some((c) => c === true );
+console.log("method some : " + areSomeTrue); //output : true
+//with typeof
+var areAllString = namess.some((name) => typeof name === 'number')//are all string ?
+console.log(areAllString);//output : false, because need the 'number'
