@@ -203,6 +203,54 @@ var namess = ['Albi', 'Alen', 'Alun', 'Elon'];
 var bools = [true, true, true, true];
 var areSomeTrue = bools.some((c) => c === true );
 console.log("method some : " + areSomeTrue); //output : true
+document.getElementById("functionalProgramming-6").innerHTML = 'some method : ' + areSomeTrue;
 //with typeof
 var areAllString = namess.some((name) => typeof name === 'number')//are all string ?
 console.log(areAllString);//output : false, because need the 'number'
+
+//SORT
+//The sort methods arranges the array elements either ascending or descending order. By default, the sort() method sorts values as strings.
+//Sorting string values
+var products = ['Milk', 'Coffee', 'Sugar', 'Honey', 'Apple', 'Carrot'];
+console.log('sort values : ' + products.sort());//output : ascending (A-Z) or discending(Z-A)
+document.getElementById('functionalProgramming-7').innerHTML = 'sort method : ' + (products.sort()); 
+//Sorting numeric 
+var numbersRandom = [9.81, 3.14, 100, 37 ];
+console.log('sort number : '+ numbersRandom.sort());
+//using sort method to sort number items provide a worng result
+numbersRandom.sort(function (a, b) {
+    return a - b
+});
+console.log('sort with function : ' + numbersRandom);
+//Sorting Object Arrays
+//Whenever we sort objects in an array, we use the object key to compare. Let us see the example below.
+//strukture
+// objArr.sort(function(a, b){
+//     if (a.key < b.key) return -1
+//     if (a.key > b.key) return 1
+//     return 0;
+// });
+// or ---------------
+// objArr.sort(function (a, b){
+//     if (a['key'] < b ['key']) return -1
+//     if (a['key'] > b ['key']) return 1
+//     return 0;
+// });
+// Example
+var usersRandom = [
+    {name: 'Albi', age: 150},
+    {name: 'Crook',age: 50},
+    {name: 'Byrell', age: 100},
+    {name: 'Jack', age: 20}
+];
+
+usersRandom.sort((a, b) => {
+    if (a.age < b.age) return -1
+    if (a.age > b.age) return 1
+    return 0;
+});
+console.log(usersRandom); //sorted ascending age 20 - 150
+
+// END
+// NEXT EXERCISE :)
+
