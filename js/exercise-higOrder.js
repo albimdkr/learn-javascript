@@ -12,7 +12,10 @@ var products = [
 
 //EXERCISE 1
 //case 1 : Explain the difference between forEach, map, filter, and reduce.
-//forEach : for iterate an elements 
-// map : Iterate an elemetns and modify . callback function elements with index, array params or return a new array
-//filter : to filter ouc item cindition and return a new array
-//reduce : can take callback function, the callback function takes accumlator, current, and optional value as a paramater and return a single value 
+//forEach   : for iterate an elements 
+//map       : Iterate an elemetns and modify . callback function elements with index, array params or return a new array
+//filter    : to filter ouc item cindition and return a new array
+//reduce    : can take callback function, the callback function takes accumlator, current, and optional value as a paramater and return a single value 
+
+// case 2 : Define a callback function before you use it in forEach, map, filter or reduce
+//callback as a function in javacript for send as a paramater. function callback has synhcrounous function, cause a function has direct execution to process
