@@ -19,3 +19,7 @@ var products = [
 
 // case 2 : Define a callback function before you use it in forEach, map, filter or reduce
 //callback as a function in javacript for send as a paramater. function callback has synhcrounous function, cause a function has direct execution to process
+
+//case 3 :  Use forEach to console.log each country in the countries array.
+var countries = ['Indonesia', 'Singapura', 'Timor Leste'];
+countries.forEach((element) => console.log(element));
