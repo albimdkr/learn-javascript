@@ -27,3 +27,7 @@ countries.forEach((element) => console.log(element));
 //case 4 : Use forEach to console.log each name in the names array.
 var names = ['Alex Turner', 'Curt Cobain'];
 names.forEach((element) => console.log(element));
+
+//case 5 : Use forEach to console.log each number in the numbers array.
+var numbers = [1,2,3,4,5];
+numbers.forEach((element) => console.log(element));
