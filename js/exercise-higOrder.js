@@ -23,3 +23,7 @@ var products = [
 //case 3 :  Use forEach to console.log each country in the countries array.
 var countries = ['Indonesia', 'Singapura', 'Timor Leste'];
 countries.forEach((element) => console.log(element));
+
+//case 4 : Use forEach to console.log each name in the names array.
+var names = ['Alex Turner', 'Curt Cobain'];
+names.forEach((element) => console.log(element));
