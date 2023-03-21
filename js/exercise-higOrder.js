@@ -31,3 +31,13 @@ names.forEach((element) => console.log(element));
 //case 5 : Use forEach to console.log each number in the numbers array.
 var numbers = [1,2,3,4,5];
 numbers.forEach((element) => console.log(element));
+
+//case 6 : Use map to create a new array by changing each country to uppercase in the countries array.
+var countries = ['Indonesia', 'Singapura', 'Timor Leste'];
+countries.map((element) => console.log(element.toUpperCase())); //method 1
+var countriesToUpperCase = countries.map((element) => element.toUpperCase()); //method 2
+console.log(countriesToUpperCase);
+
+// case 7 : Use map to create an array of countries length from countries array.
+var countries = ['Indonesia', 'Singapura', 'Timor Leste'];
+countries.map((element) => console.log(element.length))
