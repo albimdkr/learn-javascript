@@ -41,3 +41,8 @@ console.log(countriesToUpperCase);
 // case 7 : Use map to create an array of countries length from countries array.
 var countries = ['Indonesia', 'Singapura', 'Timor Leste'];
 countries.map((element) => console.log(element.length))
+//case 8 : Use map to create a new array by changing each number to square in the numbers array
+//case 9 : Use map to change to each name to uppercase in the names array
+var names = ['articMonkey', 'AlexTurner', 'Nirvana', 'Curt Cobain'];
+var namesUp = names.map((element) => element.toUpperCase());
+console.log(namesUp)
