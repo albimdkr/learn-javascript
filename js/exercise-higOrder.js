@@ -46,3 +46,24 @@ countries.map((element) => console.log(element.length))
 var names = ['articMonkey', 'AlexTurner', 'Nirvana', 'Curt Cobain'];
 var namesUp = names.map((element) => element.toUpperCase());
 console.log(namesUp)
+
+//case 10 : Use map to map the products array to its corresponding prices
+var product = [
+  {
+    name : 'Gold',
+    price : 10,
+  },
+  {
+    name : 'Silver',
+    price : 07,
+  },
+  {
+    name : 'Bronze',
+    price : 05
+  }
+];
+
+var correspoding = product.map((element) => {
+  return element ['price'] + (element['price']);
+});
+console.log(correspoding);
