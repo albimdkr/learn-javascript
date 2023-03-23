@@ -79,3 +79,8 @@ console.log(searchCountries);
 var countries = ['Indonesia', 'England', 'Russia', 'France', 'Poland'];
 var searchSixChar = countries.filter((x) => x.length === 6)
 console.log(searchSixChar);
+
+//case 13 : Use filter to filter out countries containing six letters and more in the country array.
+var countries = ['Indonesia', 'England', 'Russia', 'France', 'Poland'];
+var sixLetter = countries.filter ((x) => x.length > 6)
+console.log(sixLetter);
