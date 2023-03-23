@@ -74,3 +74,8 @@ var searchCountries = otherCountries.filter((x) =>
 	x.includes('land')
 )
 console.log(searchCountries);
+
+//case 12 : Use filter to filter out countries having six character
+var countries = ['Indonesia', 'England', 'Russia', 'France', 'Poland'];
+var searchSixChar = countries.filter((x) => x.length === 6)
+console.log(searchSixChar);
