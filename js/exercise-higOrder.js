@@ -84,3 +84,8 @@ console.log(searchSixChar);
 var countries = ['Indonesia', 'England', 'Russia', 'France', 'Poland'];
 var sixLetter = countries.filter ((x) => x.length > 6)
 console.log(sixLetter);
+
+//case 14 : Use filter to filter out country start with 'E';
+var countries = ['Indonesia', 'England', 'Russia', 'France', 'Poland'];
+var searchE = countries.filter((e) => e.includes('E'));
+console.log(searchE);
