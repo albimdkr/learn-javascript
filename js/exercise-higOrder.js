@@ -67,3 +67,10 @@ var correspoding = product.map((element) => {
   return element ['price'] + (element['price']);
 });
 console.log(correspoding);
+
+//case 11 : Use filter to filter out countries containing land.
+var otherCountries = ['England', 'America', 'Switzerland', 'Japan'];
+var searchCountries = otherCountries.filter((x) => 
+	x.includes('land')
+)
+console.log(searchCountries);
