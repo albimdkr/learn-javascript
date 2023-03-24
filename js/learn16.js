@@ -57,6 +57,47 @@ console.log(companies2.delete('Google'))
 console.log(companies2.size) // 4 elements left in the set
 console.log("after delete");
 console.log(companies2);
+document.getElementById("set-5").innerHTML = "Delete method sets : console.log()";
+
+//Checking an element in sets
+//The has method can help to know if a certain element exists in a set.
+console.log(companies2.has('Apple')); //checking in array companies 2 an apple ? : false
+console.log(companies2.has('spotify')); //checking in array companies 2 an spotify ? : true
+document.getElementById("set-6").innerHTML = "Checking method sets : console.log()";
+
+//Clearing the set
+//It removes all the elements from a set.
+companies2.clear();
+console.log(companies2);
+document.getElementById("set-6").innerHTML = "Clear method sets : console.log()";
+
+//EXAMPLE USE SET
+console.log("example use sets");
+var languages = [
+    'English',
+    'Finnish',
+    'English',
+    'French',
+    'Spanish',
+    'English',
+    'French',
+];
+const langSet = new Set(languages);
+console.log(langSet);
+console.log(langSet.size);//4
+
+const counts = []
+const count = {}
+
+for (const l of langSet) {
+    const filteredLang = languages.filter((lng) => lng === l) // l not 1 or i
+    console.log(filteredLang) // ["English", "English", "English"]
+    counts.push({ lang: l, count: filteredLang.length })
+}
+console.log(counts);
+
+
+
 
 
 
