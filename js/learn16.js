@@ -72,6 +72,7 @@ console.log(companies2);
 document.getElementById("set-6").innerHTML = "Clear method sets : console.log()";
 
 //EXAMPLE USE SET
+//example case 1 : 
 console.log("example use sets");
 var languages = [
     'English',
@@ -95,6 +96,48 @@ for (const l of langSet) {
     counts.push({ lang: l, count: filteredLang.length })
 }
 console.log(counts);
+
+//example case 2 : For instance to count unique item in an array.
+var numbers = [5, 3, 2, 5, 5, 9, 4, 5];
+var setOfNumbers = new Set(numbers);
+console.log(setOfNumbers);
+
+//Union Of Sets
+//To find a union to two sets can be achieved using spread operator. Lets find the union of set A and set B (A U B)
+var a = [1,2,3,4,5];
+var b = [3,4,5,6];
+var c = [...a, ...b];
+
+let A = new Set(a);
+let B = new Set(b);
+let C = new Set(c);
+console.log(C); //output : set(6) [ 1, 2, 3, 4, 5, 6 ]
+
+//Intersection of sets
+//To find an intersection of two sets can be achieved using filter. Lets find the intersection of set A and set B (A ∩ B)
+var a2 = [1, 2, 3, 4, 5];
+var b2 = [3, 4, 5, 6];
+
+let A2 = new Set(a2);
+let B2 = new Set(b2);
+
+let c2 = a2.filter((num) => B2.has(num));
+let C2 = new Set(c2);
+console.log(C2); //output : set(3) [3,4,5]
+
+//Difference Of Sets
+//to find an the difference between two sets can be achivied using filter. Lets find the different of set A and set B (A\B)
+var a3 = [1,2,3,4,5];
+var b3 = [3,4,5,6];
+
+let A3 = new Set(a3);
+let B3 = new Set(b3);
+
+let c3 = a3.filter((num) => !B3.has(num));
+let C3 = new Set(c3);
+console.log(C3); //output : set [1,2]
+
+//MAP
 
 
 
