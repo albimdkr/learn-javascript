@@ -138,13 +138,46 @@ let C3 = new Set(c3);
 console.log(C3); //output : set [1,2]
 
 //MAP
+//Creating an empty Map
+const map = new Map();
+console.log(map)
+document.getElementById("map-1").innerHTML = "Creating an empty map : console.log()";
 
+//Creating an Map from array
+var countries = [
+  ['Finland', 'Helsinki'],
+  ['Sweden', 'Stockholm'],
+  ['Norway', 'Oslo'],
+];
+const map2 = new Map(countries);
+console.log(map2);
+console.log(map2.size);
+document.getElementById("map-2").innerHTML = "Creating an map from array : console.log()";
 
+//Adding values to the map
+const countriesMap = new Map();
+console.log(countriesMap.size);
+countriesMap.set('Finland', 'Helsinki');
+countriesMap.set('Sweden', 'Stockholm');
+countriesMap.set('Norway', 'Oslo');
+console.log(countriesMap);
+console.log(countriesMap.size);
+document.getElementById("map-3").innerHTML = "Adding values to the map : console.log()";
 
+//Getting value dorm Map
+console.log(countriesMap.get('Finland'));
+document.getElementById("set-4").innerHTML = "Getting value from Map : console.log()";
 
+//Checking key in map
+//Check if a key exists in a map using has method. It returns true or false.
+console.log(countriesMap.has('Finland'));
+document.getElementById("map-6").innerHTML = "Checking key in map : console.log()";
 
-
-
+//Getting all values from map using loop
+for (const country of countriesMap){
+  console.log(country);
+};
+document.getElementById("map-7").innerHTML = "Getting all values from map using loop : console.log()"
 
 
 
