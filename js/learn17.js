@@ -46,3 +46,85 @@ console.log(num1, num2, num3);
 console.log(rest);
 
 //Destructuring during iteration
+//case 8
+const countries1 = [['Finland', 'Helnski'], ['Sweden', 'Stocholm'], ['Norway', 'Oslo']];
+for (const [country, city] of countries1){
+  console.log(country, city);
+};
+
+//case 9
+const fullstack1 = [
+    ['HTML5', 'CSS3', 'JavaScript', 'React'],
+    ['Node', 'Express', 'MongoDB']
+];
+for (const [first,second, third] of fullstack1){
+  console.log(first, second, third);
+};
+
+//Destructuring Object
+//When we destructure the name of the variable we use to destructure should be exactly the same as the key or property of the object. See the example below.
+const rectangle = {
+  width : 20,
+  heigth : 10,
+  area : 200
+};
+let {width, heigth, area, perimeter } = rectangle;
+console.log(width, heigth, area, perimeter); //20 10 200
+
+//Renaming during structuring
+const rectangle2 = {
+  width : 20,
+  height : 10,
+  area : 200
+}
+let {width: w, height: h, area: a, perimeter: p } = rectangle2
+console.log(w,h,a,p); //20 10 200
+
+//Object parameter without destructuring
+//without destucturing
+const rect = {
+  width : 20,
+  height: 10
+};
+const calculatorPerimeter = rectangle => {
+  return 2 * (rectangle.width + rectangle.height)
+};
+console.log(calculatorPerimeter(rect)); //60
+
+//another example
+const person = {
+  firstName : 'Albi',
+  lastName : 'Mudakar',
+  age : 19,
+  country : 'Indonesia',
+  status : 'Student',
+  skills : [
+    'HTMLS',
+    'CSS3',
+    'JavaScript',
+    'NodeJs',
+    'MySql'
+  ],
+  languanges : ['Indonesian', 'English', 'Sundanese']
+};
+//let us create a function with give information about the person wihtout destructuring
+const getPersonInfo = obj => {
+  const skills = obj.skills;
+  const formattedSkills = skills.slice(0, -1).join(',');
+  const languanges = obj.languanges;
+  const formattedLanguanges = languanges.slice(0, -1).join(', ');
+
+  personInfo = `${obj.firstName} ${obj.lastName} lives in ${obj.country}. He is ${obj.age} years old. He is an ${obj.status}. He learn ${formattedSkills} and ${skills[skills.length - 1]}. He speak ${formattedLanguanges} and a little bit of ${languanges[2]}`;
+  return personInfo;
+};
+console.log(getPersonInfo(person));
+
+//Object Parameter with destucturing
+const rect1 = {
+  width : 20,
+  height: 10
+};
+const calculatorPerimeter1 = ({width, height }) => {
+  return 2 * (width + height);
+};
+console.log(calculatorPerimeter1(rect1)); //60
