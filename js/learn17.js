@@ -128,3 +128,21 @@ const calculatorPerimeter1 = ({width, height }) => {
   return 2 * (width + height);
 };
 console.log(calculatorPerimeter1(rect1)); //60
+
+//let use create function which give information about the person object with desructuring
+const getPersonInfo1 = ({
+    firstName,
+    lastName,
+    age,
+    country,
+    job,
+    skills,
+    languanges
+}) => {
+  const formattedSkills = skills.slice(0, -1).join(', ');
+  const formattedLanguanges = languanges.slice(0, -1).join(',');
+
+  personInfo1 = `${firstName} ${lastName} lives in ${country}. He is ${age} years old. He is an ${job}. He learn ${formattedSkills} and ${skills[skills.length - 1]}. He Speak ${formattedLanguanges} and a little bit of ${languanges[2]}.`
+  return personInfo1;
+}
+console.log(getPersonInfo1(person));
