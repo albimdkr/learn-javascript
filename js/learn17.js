@@ -174,3 +174,36 @@ const numss = [1,2,3,4,5,6,7,8,9,10];
 let [numss1, numss2, numss3, ...restt] = numss;
 console.log(numss1, numss2, numss3);
 console.log(restt);
+
+
+const countries = [
+  'Germany',
+  'France',
+  'Belgium',
+  'Finland',
+  'Sweden',
+  'Norway',
+  'Denmark',
+  'Iceland'
+];
+let [gem, fra, , ...nordicCountries] = countries;
+console.log(gem);
+console.log(fra);
+console.log(nordicCountries);
+
+// Spread operator to copy array
+const evens = [0,2,4,6,8,10];
+const evenNumbers = [...evens];
+
+const odds = [1,3,5,7,9];
+const addNumbers = [...odds];
+const wholeNumbers = [...evens, ...odds];
+console.log(evenNumbers);
+console.log(addNumbers);
+console.log(wholeNumbers);
+
+//example 2 spread copy array
+const frontEnd1 = ['HTML', 'CSS', 'JS', 'React'];
+const backEnd1 = ['Node', 'Express', 'MongoDB'];
+const fullStack = [...frontEnd1, ...backEnd1];
+console.log(fullStack);
