@@ -207,3 +207,13 @@ const frontEnd1 = ['HTML', 'CSS', 'JS', 'React'];
 const backEnd1 = ['Node', 'Express', 'MongoDB'];
 const fullStack = [...frontEnd1, ...backEnd1];
 console.log(fullStack);
+
+//Spread operator to copy object
+const users = {
+  name : 'Albi',
+  title : 'Programmer',
+  country : 'Indonesian',
+  city : 'Bandung'
+};
+const copiedUsers = {...users};
+console.log(copiedUsers);
