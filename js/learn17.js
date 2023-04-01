@@ -168,3 +168,9 @@ const todoList = [
 for (const {task, time, completed} of todoList){
   console.log(task, time, completed);
 }
+
+// Spread or Rest Operator
+const numss = [1,2,3,4,5,6,7,8,9,10];
+let [numss1, numss2, numss3, ...restt] = numss;
+console.log(numss1, numss2, numss3);
+console.log(restt);
