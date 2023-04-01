@@ -217,3 +217,9 @@ const users = {
 };
 const copiedUsers = {...users};
 console.log(copiedUsers);
+
+//Modifying or changing the object while copying
+const ModifyingUsers = {...users, title : 'cyber security'};
+console.log(ModifyingUsers);
+
+
