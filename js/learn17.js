@@ -222,6 +222,11 @@ console.log(copiedUsers);
 const ModifyingUsers = {...users, title : 'cyber security'};
 console.log(ModifyingUsers);
 
+//Spread operator with arrow function
+const sumAllNums = (...args) => {
+  console.log(args);
+}
+sumAllNums(1,2,3,4,5);
 
 
 
