@@ -228,5 +228,15 @@ const sumAllNums = (...args) => {
 }
 sumAllNums(1,2,3,4,5);
 
+//example 2
+const sumAllNumss = (...args) => {
+  let sum = 0;
+  for (const num of args){
+    sum += num;
+  }
+  return sum 
+}
+console.log(sumAllNumss(1,2,3,4,5));
+
 
 
