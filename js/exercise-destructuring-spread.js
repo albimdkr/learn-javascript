@@ -8,3 +8,13 @@ console.log(e,pi,gravity,humanBody,waterBoilingTemp);
 const countries = ['Finland', 'Estonia', 'Sweden', 'Denmark', 'Norway'];
 let [fin,est,sw,den,nor] = countries;
 console.log(fin, est, sw, den, nor);
+
+//case 3 : Destructure the rectangle object by its properties or keys.
+const rectangle1 = {
+  width : 20,
+  height : 10,
+  area : 200,
+  perimeter : 60
+}
+let {width, height, area, perimeter} = rectangle1;
+console.log(width, height, area, perimeter);
