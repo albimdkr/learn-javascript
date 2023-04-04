@@ -18,3 +18,15 @@ const rectangle1 = {
 }
 let {width, height, area, perimeter} = rectangle1;
 console.log(width, height, area, perimeter);
+
+//EXERCISE LEVEL 2
+//case 1 : Iterate through the users array and get all the keys of the object using destructuring
+var user = {
+  name : 'Albi',
+  status : 'Student',
+  age : 29,
+  skill : 'HTML, CSS, JavaScript',
+  hoby : 'Learn something new'
+}; 
+let {name, status, age, skill, hoby} = user;
+console.log(name, status, age, skill, hoby);
