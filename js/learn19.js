@@ -17,3 +17,48 @@ console.warn('Warning is different from error!');
 //console.error()
 console.error('This is an error message!');
 console.error('we all make mistakes!');
+
+//console.table()
+const OS = ['Windows', 'Linux', 'MacOS', 'Android'];
+console.table(OS);
+
+const user = {
+    name : 'Albi',
+    title : 'Programmer',
+    country : 'Indonesia',
+    city : 'Bandung',
+    status : 'Student'
+};
+console.table(user)
+
+const users = [
+    {
+      name: 'Asabeneh',
+      title: 'Programmer',
+      country: 'Finland',
+      city: 'Helsinki',
+      age: 250
+    },
+    {
+      name: 'Eyob',
+      title: 'Teacher',
+      country: 'Sweden',
+      city: 'London',
+      age: 25
+    },
+    {
+      name: 'Asab',
+      title: 'Instructor',
+      country: 'Norway',
+      city: 'Oslo',
+      age: 22
+    },
+    {
+      name: 'Matias',
+      title: 'Developer',
+      country: 'Denmark',
+      city: 'Copenhagen',
+      age: 28
+    }
+  ]
+  console.table(users)
