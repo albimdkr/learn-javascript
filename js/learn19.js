@@ -166,3 +166,6 @@ const funct = () => {
 funct();
 funct();
 funct();
+
+//console.clear()
+console.clear();
