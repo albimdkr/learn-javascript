@@ -159,3 +159,10 @@ console.group('Users');
 console.log(users1);
 console.groupEnd();
 
+//console.count()
+const funct = () => {
+    console.count('Function Has Been Called');
+};
+funct();
+funct();
+funct();
