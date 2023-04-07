@@ -13,3 +13,7 @@ console.log('%c30 Days%c %cOf%c %cJavaScript%c', 'color:green', '', 'color:red',
 //to give warning
 console.warn('This is a warning');
 console.warn('Warning is different from error!');
+
+//console.error()
+console.error('This is an error message!');
+console.error('we all make mistakes!');
