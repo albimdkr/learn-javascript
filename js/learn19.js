@@ -87,4 +87,7 @@ const users = [
   });
   console.timeEnd('forEach loop');
 
-  //
+  //console.info()
+  console.info('30 Days Of JavaScript challenges in trending on github');
+  console.info('30 Days JavaScript, can frontEnd or BackEnd');
+  console.info('With learn JavaScript, you have knowlodge about web tech');
