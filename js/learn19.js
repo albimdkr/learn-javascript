@@ -91,3 +91,9 @@ const users = [
   console.info('30 Days Of JavaScript challenges in trending on github');
   console.info('30 Days JavaScript, can frontEnd or BackEnd');
   console.info('With learn JavaScript, you have knowlodge about web tech');
+
+  //console.assert()
+  console.assert(4 > 3, 'Is Greater than 3');//no result cause true
+  console.assert(3 > 4, 'Is not grater than 4');//Assertion failed
+
+  
