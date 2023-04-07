@@ -95,5 +95,67 @@ const users = [
   //console.assert()
   console.assert(4 > 3, 'Is Greater than 3');//no result cause true
   console.assert(3 > 4, 'Is not grater than 4');//Assertion failed
+  for (let i = 0; i <= 10; i += 1){
+    let errorMesssage = `${i} is not even`
+    console.log('the # is ' + i);
+    console.assert(i % 2 === 0, {number : i, errorMesssage: errorMesssage});
+  };
 
-  
+  //console.group()
+var names = ['Asabeneh', 'Brook', 'David', 'John'];
+var countries1 = [
+  ['Finland', 'Helsinki'],
+  ['Sweden', 'Stockholm'],
+  ['Norway', 'Oslo']
+]
+var user1 = {
+  name: 'Asabeneh',
+  title: 'Programmer',
+  country: 'Finland',
+  city: 'Helsinki',
+  age: 250
+}
+var users1 = [
+  {
+    name: 'Asabeneh',
+    title: 'Programmer',
+    country: 'Finland',
+    city: 'Helsinki',
+    age: 250
+  },
+  {
+    name: 'Eyob',
+    title: 'Teacher',
+    country: 'Sweden',
+    city: 'London',
+    age: 25
+  },
+  {
+    name: 'Asab',
+    title: 'Instructor',
+    country: 'Norway',
+    city: 'Oslo',
+    age: 22
+  },
+  {
+    name: 'Matias',
+    title: 'Developer',
+    country: 'Denmark',
+    city: 'Copenhagen',
+    age: 28
+  }
+];
+
+//by names
+console.group('Names');
+console.log(names);
+console.groupEnd();
+//by countries
+console.group('Countries');
+console.log(countries1);
+console.groupEnd();
+//by users
+console.group('Users');
+console.log(users1);
+console.groupEnd();
+
