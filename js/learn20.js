@@ -44,3 +44,16 @@ const person3 = new OtherPerson('Leon', 'Kenedy');
 console.log(person1);
 console.log(person2);
 console.log(person3);
+
+//create detail person
+class DetailPerson {
+    constructor(firstName, lastName, age, status){
+        console.log(this);
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+        this.status = status;
+    };
+};
+const detaiPerson = new DetailPerson('Albi', 'Mudakar', 240, 'Student');
+console.log(DetailPerson);
