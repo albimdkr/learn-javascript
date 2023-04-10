@@ -30,3 +30,17 @@ class Myperson2 {
 const myPerson2 = new Myperson2('Albi', 'Mudakar');
 console.log(myPerson2);// output : { firstName: "Albi", lastName: "Mudakar" }
 
+//create more person
+class OtherPerson {
+    constructor (firstName, lastName){
+        console.log(this);//check output
+        this.firstName = firstName;
+        this.lastName = lastName;
+    };
+};
+const person1 = new OtherPerson('Albi','Mudakar');
+const person2 = new OtherPerson('Jack', 'Krauser');
+const person3 = new OtherPerson('Leon', 'Kenedy');
+console.log(person1);
+console.log(person2);
+console.log(person3);
