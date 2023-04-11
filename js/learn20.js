@@ -78,3 +78,21 @@ const callPerson1 = new DefaultPerson();//take the default values
 const callPerson2 = new DefaultPerson('Leon', 'Kennedy', 28, 'USA', 'Washington DC');
 console.table(callPerson1);
 console.table(callPerson2);
+
+//Class Methods
+class GetPerson {
+    constructor (firstName,lastName, age, country, city){
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+        this.country = country;
+    };
+    getFullName(){
+        const fullName = this.firstName + ' ' +this.lastName;
+        return fullName;
+    };
+};
+const getPeron1 = new GetPerson('Albi', 'Mudakar', 50, 'Indonesian', 'Bandung');
+const getPerson2 = new GetPerson('Ada', 'Wong', 29, 'Japan', 'Tokyo');
+console.log(getPeron1.getFullName());
+console.log(getPerson2.getFullName());
