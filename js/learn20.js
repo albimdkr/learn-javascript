@@ -57,3 +57,24 @@ class DetailPerson {
 };
 const detaiPerson = new DetailPerson('Albi', 'Mudakar', 240, 'Student');
 console.log(DetailPerson);
+
+//Default values with constructor
+class DefaultPerson {
+    constructor (
+        firstName = 'Albi',
+        lastName = 'Mudakar',
+        age = 250, 
+        country = 'Indonesians',
+        city = 'Bandung'
+    ) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+        this.country = country;
+        this.city = city;
+    };
+};
+const callPerson1 = new DefaultPerson();//take the default values
+const callPerson2 = new DefaultPerson('Leon', 'Kennedy', 28, 'USA', 'Washington DC');
+console.table(callPerson1);
+console.table(callPerson2);
