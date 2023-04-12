@@ -96,3 +96,21 @@ const getPeron1 = new GetPerson('Albi', 'Mudakar', 50, 'Indonesian', 'Bandung');
 const getPerson2 = new GetPerson('Ada', 'Wong', 29, 'Japan', 'Tokyo');
 console.log(getPeron1.getFullName());
 console.log(getPerson2.getFullName());
+
+class Car {
+    constructor (carName, carSpeed){
+        this.name = carName;
+        this.speed = carSpeed;
+    };
+    testDrive(){
+        console.log(this.name + " speed is " + this.speed + " km/h ");
+    };
+};
+//test tesla
+const tesla = new Car("Tesla", 322);
+tesla.testDrive();
+//test bmw
+const bmw = new Car("bmw", 250);
+bmw.testDrive();
+
+
