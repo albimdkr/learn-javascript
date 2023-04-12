@@ -134,6 +134,27 @@ megavision.pingSpeed();
 const biznet = new Internet("Biznet", 20);
 biznet.pingSpeed();
 
+//Properties with initial value
+class ManyPerson {
+    constructor (firstName, lastName, age, country, city){
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+        this.country = country;
+        this.city = city;
+        this.score = 0;
+        this.skills = [];
+    };
+    getFullName(){
+        const fullName = this.firstName + ' ' +this.lastName;
+        return fullName;
+    };
+};
+
+const manyPerson1 = new ManyPerson('Albi','Mudakar',20,'Indonesian','Bandung');
+console.log(manyPerson1.score);
+console.log(manyPerson1.skills);
+
 
 
 
