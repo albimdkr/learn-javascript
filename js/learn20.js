@@ -97,6 +97,7 @@ const getPerson2 = new GetPerson('Ada', 'Wong', 29, 'Japan', 'Tokyo');
 console.log(getPeron1.getFullName());
 console.log(getPerson2.getFullName());
 
+//car
 class Car {
     constructor (carName, carSpeed){
         this.name = carName;
@@ -112,5 +113,28 @@ tesla.testDrive();
 //test bmw
 const bmw = new Car("bmw", 250);
 bmw.testDrive();
+
+//Internet Speed
+class Internet {
+    constructor (nameISP, bandwidthISP){
+        this.name = nameISP;
+        this.bandwidth = bandwidthISP; 
+    };
+    pingSpeed(){
+        console.info(this.name +" Speed is "+ this.bandwidth + " Mbps");
+    };
+};
+//indihome
+const indiHome = new Internet("IndiHome",30);
+indiHome.pingSpeed();
+//Megavision
+const megavision = new Internet("Megavision", 20);
+megavision.pingSpeed();
+//Biznet
+const biznet = new Internet("Biznet", 20);
+biznet.pingSpeed();
+
+
+
 
 
