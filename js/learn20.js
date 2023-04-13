@@ -155,6 +155,33 @@ const manyPerson1 = new ManyPerson('Albi','Mudakar',20,'Indonesian','Bandung');
 console.log(manyPerson1.score);
 console.log(manyPerson1.skills);
 
+//Getter Method
+//The get method allow us to access value from the object. 
+class GetterPerson {
+    constructor(firstName, lastName, age, country, city){
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+        this.country = country;
+        this.city = city;
+        this.score = 100;
+        this.skills = ['Handgun'];
+    };
+    getFullName(){
+        const fullName = this.firstName + ' ' + this.lastName;
+        return fullName;
+    };
+    get getScore(){
+        return this.score;
+    };
+    get getSkills(){
+        return this.skills;
+    };
+};
+const getterPerson1 = new GetterPerson('Leon', 'Kenedy', '25', 'USA', 'Washington');
+console.log(getterPerson1.getFullName())
+console.log(getterPerson1.getScore);
+console.log(getterPerson1.getSkills);
 
 
 
