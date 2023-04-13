@@ -164,8 +164,8 @@ class GetterPerson {
         this.age = age;
         this.country = country;
         this.city = city;
-        this.score = 100;
-        this.skills = ['Handgun'];
+        this.score = 0;
+        this.skills = [];
     };
     getFullName(){
         const fullName = this.firstName + ' ' + this.lastName;
@@ -183,6 +183,43 @@ console.log(getterPerson1.getFullName())
 console.log(getterPerson1.getScore);
 console.log(getterPerson1.getSkills);
 
+//Setter Method
+class SetterPerson {
+    constructor(firstName, lastName, age, country, city){
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+        this.country = country;
+        this.city = city;
+        this.score = 0;
+        this.skills = [];
+    };
+    getFullName(){
+        const fullName = this.firstName + ' ' + this.lastName;
+        return fullName;
+    };
+    get getScore(){
+        return this.score;
+    };
+    get getSkills(){
+        return this.skills;
+    };
 
-
+    set setScore(score){
+        this.score+=score;
+    };
+    set setSkill(skill){
+        this.skills.push(skill);
+    };
+};
+const setterPerson1 = new SetterPerson('Albi','Mudakar',20,'Indonesian','Bandung');
+//add value with setter method
+setterPerson1.setScore = 1;
+setterPerson1.setSkill = 'HTML';
+setterPerson1.setSkill = 'CSS';
+setterPerson1.setSkill = 'JavaScript';
+//call
+console.log(setterPerson1.getFullName());
+console.log(setterPerson1.score);
+console.log(setterPerson1.skills);
 
