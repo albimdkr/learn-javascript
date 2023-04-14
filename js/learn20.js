@@ -120,8 +120,9 @@ class Internet {
         this.name = nameISP;
         this.bandwidth = bandwidthISP; 
     };
-    pingSpeed(){
-        console.info(this.name +" Speed is "+ this.bandwidth + " Mbps");
+    pingSpeed(bandwidth){
+        this.bandwidth = bandwidth;
+        console.log(this.name +" Speed is "+ this.bandwidth + " Mbps");
     };
 };
 //indihome
@@ -344,6 +345,7 @@ console.log(MyPerson2.showDateTime());
 
 //Inheritance
 // Using inheritance we can access all the properties and the methods of the parent class.
+// Inheritance 1
 class Student extends SetterPerson {
     saySomething(){
         console.log('I am child of the person class');
@@ -353,3 +355,28 @@ const student1 = new Student('Albi', 'Mudakar', 20, 'Indonesian', 'Bandung');
 console.log(student1);
 console.log(student1.saySomething());
 console.log(student1.getFullName());
+
+//Inheritance 2
+// class Internet {
+//     constructor (nameISP, bandwidthISP){
+//         this.name = nameISP;
+//         this.bandwidth = bandwidthISP; 
+//     };
+//     pingSpeed(){
+//         console.info(this.name +" Speed is "+ this.bandwidth + " Mbps");
+//     };
+// };
+
+class Provider extends Internet {
+    show(){
+        if (this.bandwidth < 20){
+            console.warn(`${this.name} Is low ${this.bandwidth} Mbps in the here`);
+        } else {
+            console.info(`${this.name} is fast cause ${this.bandwidth} Greater`);
+        };
+        
+    };
+};
+let provider = new Provider("MyRepublic");
+provider.pingSpeed(10); //set value in here
+provider.show();
