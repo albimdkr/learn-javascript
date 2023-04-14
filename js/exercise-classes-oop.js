@@ -26,8 +26,29 @@ class Animals {
   }
 };
 
-var myCat = new Animals('Meong', 5, 'orange', 4 );
+//case 02 : Create a Dog and Cat child class from the Animal Class.
+// this case im using Inhetince from class Animals
+class Dog extends Animals{
+  thisIsDog(){
+    console.log('Uk Uk Uk');
+  };
+};
+var myDog = new Dog('Garvin', 3, 'white', 4);
+console.log(myDog.thisIsDog());
+console.log(myDog.getName());
+console.log(myDog.getAge());
+console.log(myDog.getColor());
+console.log(myDog.getLegs())
+
+class Cat extends Animals {
+  	thisIsCat(){
+      console.log(`${this.name} : Meong Meong Meong`)
+    };
+};
+var myCat = new Cat('Rio', 4, 'Gray', 4);
+console.log(myCat.thisIsCat());
 console.log(myCat.getName());
 console.log(myCat.getAge());
 console.log(myCat.getColor());
 console.log(myCat.getLegs());
+
