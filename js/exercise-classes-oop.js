@@ -41,9 +41,9 @@ console.log(myDog.getColor());
 console.log(myDog.getLegs())
 
 class Cat extends Animals {
-  	thisIsCat(){
-      console.log(`${this.name} : Meong Meong Meong`)
-    };
+  thisIsCat(){
+    console.log(`${this.name} : Meong Meong Meong`)
+  };
 };
 var myCat = new Cat('Rio', 4, 'Gray', 4);
 console.log(myCat.thisIsCat());
