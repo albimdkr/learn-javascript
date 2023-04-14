@@ -366,7 +366,7 @@ console.log(student1.getFullName());
 //         console.info(this.name +" Speed is "+ this.bandwidth + " Mbps");
 //     };
 // };
-
+// in the below, inherit from class internet
 class Provider extends Internet {
     show(){
         if (this.bandwidth < 20){
@@ -380,3 +380,21 @@ class Provider extends Internet {
 let provider = new Provider("MyRepublic");
 provider.pingSpeed(10); //set value in here
 provider.show();
+
+//Overriding Methods
+// can customize the parent methods, can add addtional properties to child class
+// need use the constructor function the child class to, inside constructor call super() function
+class Student1 extends SetterPerson {
+    constructor(firstName,lastName, age, country, city, gender){
+        super(firstName, lastName, age, country, city, gender)
+        this.gender = gender;
+    };
+    saySomething(){
+        console.log('Hello, I am a child of the person class');
+    };
+};
+
+
+const s1 = new Student1 ('Krauser', 'Jack', 34, 'Mamarica', 'NYC', 'Male');
+console.log(s1.saySomething());
+
