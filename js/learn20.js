@@ -393,8 +393,6 @@ class Student1 extends SetterPerson {
         console.log('Hello, I am a child of the person class');
     };
 };
-
-
 const s1 = new Student1 ('Krauser', 'Jack', 34, 'Mamarica', 'NYC', 'Male');
 console.log(s1.saySomething());
 
