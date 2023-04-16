@@ -447,7 +447,7 @@ console.log(mudakar);
 //Public Class (Field:porperty and value)
 //character public can access in out the class, the default class javascript is public
 class Customer {
-    //this field public
+    //in below, field public
     firstName;
     lastName;
     balance = 0;
@@ -459,3 +459,33 @@ class Customer {
 }
 const albiNew = new Customer("Albi", "Mudakar");
 console.log(albiNew);
+
+//Access Modifier
+//Privae Class (Field:porperty and value)
+// this class only access in class, not in out the class. The symbol is first # or _
+class Counter {
+    #counter = 0;//this field private
+
+    increment(){
+        this.#counter++;
+    };
+
+    decrement(){
+        this.#counter--;
+    };
+
+    get(){
+        return this.#counter;
+    };
+}
+
+const callCounter = new Counter();
+callCounter.increment();// +1
+callCounter.increment();// +1
+callCounter.increment();// +1
+callCounter.increment();// +1
+callCounter.decrement();// -1
+console.log(callCounter.get()); //print : ouput : 3
+// callCounter.#counter = 100; output : Uncaught SyntaxError: reference to undeclared private field or method #counter
+
+
