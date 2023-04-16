@@ -52,3 +52,26 @@ console.log(myCat.getAge());
 console.log(myCat.getColor());
 console.log(myCat.getLegs());
 
+// Level 2 
+// case 01 : Override the method you create in Animal class
+class Cat extends Animals {
+  constructor(name,age,color,legs,gender){
+    super(name,age,color,legs,gender); //override, call super()
+    this.gender = gender;
+  }
+  thisIsCat(){
+    console.log(`${this.name} : Meong Meong Meong`)
+  };
+  getGender(){
+    var gender = this.gender;
+    return gender;
+  };
+};
+var myCat = new Cat('Rio', 4, 'Gray', 4, 'Male');
+console.log(myCat.thisIsCat());
+console.log(myCat.getName());
+console.log(myCat.getAge());
+console.log(myCat.getColor());
+console.log(myCat.getLegs());
+console.log(myCat.getGender());//call the gender in here
+

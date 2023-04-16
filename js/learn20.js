@@ -5,19 +5,19 @@
 class Myperson {
 
 };
-const myPerson = new Myperson();
+const myPerson = new Myperson(); //object instance
 console.log(myPerson);
 
 
 //Class Constructor
 class Myperson1 {
-    constructor (firstName, lastName){
+    constructor (firstName, lastName){ // constructor with params
         console.log(this); //check the output from here
-        this.firstName = firstName;
-        this.lastName = lastName;
+        this.firstName = firstName; //properti class
+        this.lastName = lastName; //properti class
     };
 };
-const myPerson1 = new Myperson1();
+const myPerson1 = new Myperson1(); //object instnace
 console.log(myPerson1); //undifined
 //after instantiate the class
 class Myperson2 {
@@ -87,7 +87,7 @@ class GetPerson {
         this.age = age;
         this.country = country;
     };
-    getFullName(){
+    getFullName(){//method
         const fullName = this.firstName + ' ' +this.lastName;
         return fullName;
     };
@@ -396,3 +396,30 @@ class Student1 extends SetterPerson {
 const s1 = new Student1 ('Krauser', 'Jack', 34, 'Mamarica', 'NYC', 'Male');
 console.log(s1.saySomething());
 
+
+//Prototype
+// implementasi prototyp e ketika di object instance nya tidak ada sebuah function yang diiinginkan , maka akan naik menuju prototype function (dalam artian karna ada function yg di inginkan)
+function PersonPrototype (firstName,lastName){
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.sayHello = function(name){
+        console.log(`Hello ${name} my name is ${this.firstName} `);
+    };
+}
+
+PersonPrototype.prototype.sayBye = function (){
+    console.info("good bye");
+}
+
+PersonPrototype.prototype.run = function(){
+    console.info(`this ${this.firstName} is running`);
+};
+
+const albi = new PersonPrototype('Albi','Nasyabi');
+const mudakar = new PersonPrototype('Mudakar','Nasyabi');
+
+console.log(albi);
+console.log(mudakar);
+
+// albi.sayBye();
+// albi.run();
