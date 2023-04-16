@@ -488,4 +488,30 @@ callCounter.decrement();// -1
 console.log(callCounter.get()); //print : ouput : 3
 // callCounter.#counter = 100; output : Uncaught SyntaxError: reference to undeclared private field or method #counter
 
+// Class Prive Method
+class PersonPrivateMethod {
+
+    say(name){ //public method
+        if (name){
+            this.#sayWithName(name);
+        } else {
+            this.#sayWithoutName();
+        }
+    };
+
+    #sayWithoutName(){ //private method
+        console.warn('-- Sorry No Name--');
+    };
+
+    #sayWithName(name){//private method
+        console.info(`Hello ${name}`);
+    };
+}
+
+const callName = new PersonPrivateMethod();
+callName.say('Leon');
+//if no have name in params
+callName.say();
+//if call the private method
+//callName.#sayWithoutName(); //error : Uncaught SyntaxError: reference to undeclared private field or method #sayWithoutName
 
