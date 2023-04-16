@@ -103,7 +103,7 @@ class Car {
         this.name = carName;
         this.speed = carSpeed;
     };
-    testDrive(){
+    testDrive(){ 
         console.log(this.name + " speed is " + this.speed + " km/h ");
     };
 };
@@ -146,7 +146,7 @@ class ManyPerson {
         this.score = 0;
         this.skills = [];
     };
-    getFullName(){
+    getFullName(){ //this name posisition is prototype
         const fullName = this.firstName + ' ' +this.lastName;
         return fullName;
     };
@@ -168,14 +168,14 @@ class GetterPerson {
         this.score = 0;
         this.skills = [];
     };
-    getFullName(){
+    getFullName(){ //this name posisition is prototype
         const fullName = this.firstName + ' ' + this.lastName;
         return fullName;
     };
-    get getScore(){
+    get getScore(){ //this name posisition is prototype
         return this.score;
     };
-    get getSkills(){
+    get getSkills(){ //this name posisition is prototype
         return this.skills;
     };
 };
@@ -195,21 +195,21 @@ class SetterPerson {
         this.score = 0;
         this.skills = [];
     };
-    getFullName(){
+    getFullName(){ //this name posisition is prototype 
         const fullName = this.firstName + ' ' + this.lastName;
         return fullName;
     };
-    get getScore(){
+    get getScore(){ //this name posisition is prototype
         return this.score;
     };
-    get getSkills(){
+    get getSkills(){ //this name posisition is prototype
         return this.skills;
     };
 
     set setScore(score){
         this.score+=score;
     };
-    set setSkill(skill){
+    set setSkill(skill){ //this name posisition is prototype
         this.skills.push(skill);
     };
 };
@@ -343,9 +343,9 @@ class MyPerson2 {
 console.log(MyPerson2.favoriteSkill());
 console.log(MyPerson2.showDateTime());
 
-//Inheritance
+// Class Inheritance
 // Using inheritance we can access all the properties and the methods of the parent class.
-// Inheritance 1
+// Inheritance 1 : from class SetterPerson
 class Student extends SetterPerson {
     saySomething(){
         console.log('I am child of the person class');
@@ -356,7 +356,7 @@ console.log(student1);
 console.log(student1.saySomething());
 console.log(student1.getFullName());
 
-//Inheritance 2
+//Inheritance 2 : From class Internet
 // class Internet {
 //     constructor (nameISP, bandwidthISP){
 //         this.name = nameISP;
@@ -386,7 +386,7 @@ provider.show();
 // need use the constructor function the child class to, inside constructor call super() function
 class Student1 extends SetterPerson {
     constructor(firstName,lastName, age, country, city, gender){
-        super(firstName, lastName, age, country, city, gender)
+        super(firstName, lastName, age, country, city, gender) //get from paren class
         this.gender = gender;
     };
     saySomething(){
@@ -397,8 +397,27 @@ const s1 = new Student1 ('Krauser', 'Jack', 34, 'Mamarica', 'NYC', 'Male');
 console.log(s1.saySomething());
 
 
+//Super Method
+class Shape {
+    paintInShape(){
+        console.info("Paint Shape");
+    };
+}
+
+class Circle extends Shape {
+    paint(){ //if this metode delete, circle instance choose the method paint in the shape
+        //how to select paint method in parent class Shape: call the super method in this below
+        super.paintInShape();
+        console.info("Paint Circle");
+    };
+}
+const circle = new Circle();
+circle.paint();
+
+
+
 //Prototype
-// implementasi prototyp e ketika di object instance nya tidak ada sebuah function yang diiinginkan , maka akan naik menuju prototype function (dalam artian karna ada function yg di inginkan)
+// implementasi prototype ketika di object instance nya tidak ada sebuah function yang diiinginkan , maka akan naik menuju prototype function (dalam artian karna ada function yg di inginkan)
 function PersonPrototype (firstName,lastName){
     this.firstName = firstName;
     this.lastName = lastName;
