@@ -442,3 +442,20 @@ console.log(mudakar);
 
 // albi.sayBye();
 // albi.run();
+
+//Access Modifier
+//Public Class (Field:porperty and value)
+//character public can access in out the class, the default class javascript is public
+class Customer {
+    //this field public
+    firstName;
+    lastName;
+    balance = 0;
+    
+    constructor(firstName, lastName){
+        this.firstName = firstName;
+        this.lastName = lastName;
+    };
+}
+const albiNew = new Customer("Albi", "Mudakar");
+console.log(albiNew);
