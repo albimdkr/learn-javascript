@@ -50,3 +50,22 @@ try {
     console.info('The program has finish!');
 }
 console.info('Albi')
+
+
+//Try Finally : use for certain cases
+class Counter {
+
+    #counter = 1;
+
+    next(){
+        try{
+            return this.#counter;
+        } finally {
+            this.#counter++;
+        }
+    };
+}
+const counter = new Counter();
+console.info(counter.next()); //1
+console.info(counter.next()); //2
+console.info(counter.next()); //3
