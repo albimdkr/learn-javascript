@@ -46,5 +46,7 @@ try {
     console.info(Albi)
 } catch (error){ 
     console.info(`Terjadi error : ${error.message}`); //if give information message error use : message and will be fetch value from throw error message
+} finally { //finally : this program will be give information, want in any condition the program runs or succeeds, it will still be executed
+    console.info('The program has finish!');
 }
 console.info('Albi')
