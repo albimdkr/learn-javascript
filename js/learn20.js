@@ -273,7 +273,25 @@ console.log(regularMethodPerson1.getScore);
 console.log(regularMethodPerson1.getSkills);
 console.log(regularMethodPerson1);
 
+
+//Static Class Field
+class Configuration {
+    static name = "Learn JavaScript Language";
+    static version = "v1.0";
+    static author = "Albi Mudakar";
+};
+const config = new Configuration();
+console.info(config);
+//Change value field
+Configuration.name = "Albi Mudakar Nasyabi";
+//access static field value
+console.info(Configuration.name);
+console.info(Configuration.version);
+console.info(Configuration.author);
+
+
 //Static Method
+//example 1
 class MyPerson2 {
     constructor (firstName, lastName, age, country, city){
         this.firstName = firstName;
@@ -342,22 +360,18 @@ class MyPerson2 {
 };
 console.log(MyPerson2.favoriteSkill());
 console.log(MyPerson2.showDateTime());
-
-//Static Class Field
-class Configuration {
-    static name = "Learn JavaScript Language";
-    static version = "v1.0";
-    static author = "Albi Mudakar";
-};
-const config = new Configuration();
-console.info(config);
-//Change value field
-Configuration.name = "Albi Mudakar Nasyabi";
-//access static field value
-console.info(Configuration.name);
-console.info(Configuration.version);
-console.info(Configuration.author);
-
+//example 2
+class MathUtil {
+    static sum(...numbers) {
+        let total = 0;
+        for (const number of numbers){
+            total += number;
+        }
+        return total;
+    };
+}
+const result = MathUtil.sum(1,1,1,1,1);
+console.warn('static method : ' + result); //for case, mostly use for utility
 
 // Class Inheritance
 // Using inheritance we can access all the properties and the methods of the parent class.
@@ -547,4 +561,27 @@ console.log(typeof people2);
 console.info(people1 instanceof Employee);//true
 console.info(people2 instanceof Employee);//false if no inherit, true if use inherit class
 
+//Throw Error
+// give the information error to program, when prograaming its running and if the program have error, the program will throw information error to console program
+class MathUtil1 {
+    static sum(...numbers) {
+
+        //give the throw error condition
+        if (numbers.length === 0){
+            throw new Error('Nilai harus lebih dari 0!');
+        };
+
+        let total = 0;
+        for (const number of numbers){
+            total += number;
+        }
+        return total;
+    };
+}
+
+// console.info(MathUtil1.sum());
+// console.info('err'); //this error, the browser will stop program in below
+
+const result1 = MathUtil1.sum(1); //success cause 0 > 1
+console.info('Result1 : ' + result1);
 
