@@ -112,4 +112,6 @@ try {
 } finally { //finally : this program will be give information, want in any condition the program runs or succeeds, it will still be executed
     console.info('The program has finish!');
 }
-console.info('adul');
+console.info('Manual Class Error');
+
+console.log(space);
