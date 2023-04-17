@@ -627,3 +627,37 @@ class Learner extends People{
 
 const learner = new Learner('Albi');
 console.log(learner.greet());
+
+//Abstraction
+// abstract show only funsionlity or feature important in object.
+// Analogy, if create coffee from the machine esspresso,the barista cannot know the spesifik tools in the machine esspreso. The barista must know is how to use the machine esspresso to create the coffee
+//example1
+function CoffeeEsspresso (waterMili){
+    var waterMili = waterMili;
+    var totalPorta = function(){
+        return waterMili * 11;
+    }
+
+    this.totalPorta = function(){
+        return totalPorta();
+    }
+};
+const oneShoot = new CoffeeEsspresso(1);
+console.log(oneShoot.totalPorta());
+
+//example2
+//ready-only the power cause power never changes
+class CoffeeMachine {
+    constructor(power) {
+      this._power = power;
+    }
+
+    get power() {
+      return this._power;
+    }
+  
+  }
+// create the coffee machine
+let coffeeMachine = new CoffeeMachine(100);
+console.log(`Power is: ${coffeeMachine.power}W`); // Power is: 100W
+// coffeeMachine.power = 25; // Error (no setter)
