@@ -515,3 +515,22 @@ callName.say();
 //if call the private method
 //callName.#sayWithoutName(); //error : Uncaught SyntaxError: reference to undeclared private field or method #sayWithoutName
 
+//Operator Intenceof
+// true | false
+class Employee {
+
+};
+
+class Manager extends Employee {
+
+};
+
+const people1 = new Employee();
+const people2 = new Manager();
+console.log(typeof people1);
+console.log(typeof people2);
+
+console.info(people1 instanceof Employee);//true
+console.info(people2 instanceof Employee);//false if no inherit, true if use inherit class
+
+
