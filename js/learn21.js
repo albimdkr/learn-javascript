@@ -17,8 +17,34 @@ class MathUtil1 {
     };
 }
 
-console.info(MathUtil1.sum());
-console.info('err'); //this error, the browser will stop program in below
+// console.info(MathUtil1.sum());
+// console.info('err'); //this error, the browser will stop program in below
 
 const result1 = MathUtil1.sum(1); //success cause 0 > 1
 console.info('Result1 : ' + result1);
+
+
+//Try Catch
+class MathUtil2 {
+    static sum(...numbers) {
+
+        //give the throw error condition
+        if (numbers.length === 0){
+            throw new Error('Nilai harus lebih dari 0!');
+        };
+
+        let total = 0;
+        for (const number of numbers){
+            total += number;
+        }
+        return total;
+    };
+}
+
+try {
+    console.info(MathUtil2.sum());
+    console.info(Albi)
+} catch (error){ 
+    console.info(`Terjadi error : ${error.message}`); //if give information message error use : message and will be fetch value from throw error message
+}
+console.info('Albi')
