@@ -2,12 +2,16 @@
 //Defining a classes
 // Must Camel Case
 //Class instatiation
+
+var space ='=================';
+
 class Myperson {
 
 };
 const myPerson = new Myperson(); //object instance
 console.log(myPerson);
 
+console.log(space);
 
 //Class Constructor
 class Myperson1 {
@@ -78,6 +82,8 @@ const callPerson1 = new DefaultPerson();//take the default values
 const callPerson2 = new DefaultPerson('Leon', 'Kennedy', 28, 'USA', 'Washington DC');
 console.table(callPerson1);
 console.table(callPerson2);
+
+console.log(space);
 
 //Class Methods
 class GetPerson {
@@ -156,6 +162,8 @@ const manyPerson1 = new ManyPerson('Albi','Mudakar',20,'Indonesian','Bandung');
 console.log(manyPerson1.score);
 console.log(manyPerson1.skills);
 
+console.log(space);
+
 //Getter Method
 //The get method allow us to access value from the object. 
 class GetterPerson {
@@ -183,6 +191,8 @@ const getterPerson1 = new GetterPerson('Leon', 'Kenedy', '25', 'USA', 'Washingto
 console.log(getterPerson1.getFullName())
 console.log(getterPerson1.getScore);
 console.log(getterPerson1.getSkills);
+
+console.log(space);
 
 //Setter Method
 class SetterPerson {
@@ -273,6 +283,7 @@ console.log(regularMethodPerson1.getScore);
 console.log(regularMethodPerson1.getSkills);
 console.log(regularMethodPerson1);
 
+console.log(space);
 
 //Static Class Field
 class Configuration {
@@ -289,6 +300,7 @@ console.info(Configuration.name);
 console.info(Configuration.version);
 console.info(Configuration.author);
 
+console.log(space);
 
 //Static Method
 //example 1
@@ -373,43 +385,7 @@ class MathUtil {
 const result = MathUtil.sum(1,1,1,1,1);
 console.warn('static method : ' + result); //for case, mostly use for utility
 
-// Class Inheritance
-// Using inheritance we can access all the properties and the methods of the parent class.
-// Inheritance 1 : from class SetterPerson
-class Student extends SetterPerson {
-    saySomething(){
-        console.log('I am child of the person class');
-    };
-};
-const student1 = new Student('Albi', 'Mudakar', 20, 'Indonesian', 'Bandung');
-console.log(student1);
-console.log(student1.saySomething());
-console.log(student1.getFullName());
-
-//Inheritance 2 : From class Internet
-// class Internet {
-//     constructor (nameISP, bandwidthISP){
-//         this.name = nameISP;
-//         this.bandwidth = bandwidthISP; 
-//     };
-//     pingSpeed(){
-//         console.info(this.name +" Speed is "+ this.bandwidth + " Mbps");
-//     };
-// };
-// in the below, inherit from class internet
-class Provider extends Internet {
-    show(){
-        if (this.bandwidth < 20){
-            console.warn(`${this.name} Is low ${this.bandwidth} Mbps in the here`);
-        } else {
-            console.info(`${this.name} is fast cause ${this.bandwidth} Greater`);
-        };
-        
-    };
-};
-let provider = new Provider("MyRepublic");
-provider.pingSpeed(10); //set value in here
-provider.show();
+console.log(space);
 
 //Overriding Methods
 // can customize the parent methods, can add addtional properties to child class
@@ -426,6 +402,7 @@ class Student1 extends SetterPerson {
 const s1 = new Student1 ('Krauser', 'Jack', 34, 'Mamarica', 'NYC', 'Male');
 console.log(s1.saySomething());
 
+console.log(space);
 
 //Super Method
 class Shape {
@@ -443,6 +420,8 @@ class Circle extends Shape {
 }
 const circle = new Circle();
 circle.paint();
+
+console.log(space);
 
 //Prototype
 // implementasi prototype ketika di object instance nya tidak ada sebuah function yang diiinginkan , maka akan naik menuju prototype function (dalam artian karna ada function yg di inginkan)
@@ -487,6 +466,8 @@ class Customer {
 }
 const albiNew = new Customer("Albi", "Mudakar");
 console.log(albiNew);
+
+console.log(space);
 
 //Access Modifier
 //Privae Class (Field:porperty and value)
@@ -561,3 +542,62 @@ console.log(typeof people2);
 console.info(people1 instanceof Employee);//true
 console.info(people2 instanceof Employee);//false if no inherit, true if use inherit class
 
+console.log(space);
+
+
+//4 PILAR OOP (Inheritance, Encapsulation, Polymorphism, Abstraction)
+//Inheritance
+// Class Inheritance
+// Using inheritance we can access all the properties and the methods of the parent class.
+// Inheritance 1 : from class SetterPerson
+class Student extends SetterPerson {
+    saySomething(){
+        console.log('I am child of the person class');
+    };
+};
+const student1 = new Student('Albi', 'Mudakar', 20, 'Indonesian', 'Bandung');
+console.log(student1);
+console.log(student1.saySomething());
+console.log(student1.getFullName());
+
+
+//Inheritance 2 : From class Internet
+// class Internet {
+//     constructor (nameISP, bandwidthISP){
+//         this.name = nameISP;
+//         this.bandwidth = bandwidthISP; 
+//     };
+//     pingSpeed(){
+//         console.info(this.name +" Speed is "+ this.bandwidth + " Mbps");
+//     };
+// };
+// in the below, inherit from class internet
+class Provider extends Internet {
+    show(){
+        if (this.bandwidth < 20){
+            console.warn(`${this.name} Is low ${this.bandwidth} Mbps in the here`);
+        } else {
+            console.info(`${this.name} is fast cause ${this.bandwidth} Greater`);
+        };
+        
+    };
+};
+let provider = new Provider("MyRepublic");
+provider.pingSpeed(10); //set value in here
+provider.show();
+
+//Encapsulation
+// encapsulation use for dennied access modified in outer
+function Ongkir(berat){
+    var pajak = 500;
+    var biaya = function (){
+        return berat * 1000;
+    };
+
+    this.totalBiaya = function (){
+        return biaya() + pajak;
+    };
+}
+console.log('Encapsulation')
+const laptop = new Ongkir(4);
+console.info('total biaya : '+ laptop.totalBiaya());
