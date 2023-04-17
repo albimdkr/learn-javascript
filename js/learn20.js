@@ -343,6 +343,22 @@ class MyPerson2 {
 console.log(MyPerson2.favoriteSkill());
 console.log(MyPerson2.showDateTime());
 
+//Static Class Field
+class Configuration {
+    static name = "Learn JavaScript Language";
+    static version = "v1.0";
+    static author = "Albi Mudakar";
+};
+const config = new Configuration();
+console.info(config);
+//Change value field
+Configuration.name = "Albi Mudakar Nasyabi";
+//access static field value
+console.info(Configuration.name);
+console.info(Configuration.version);
+console.info(Configuration.author);
+
+
 // Class Inheritance
 // Using inheritance we can access all the properties and the methods of the parent class.
 // Inheritance 1 : from class SetterPerson
@@ -413,8 +429,6 @@ class Circle extends Shape {
 }
 const circle = new Circle();
 circle.paint();
-
-
 
 //Prototype
 // implementasi prototype ketika di object instance nya tidak ada sebuah function yang diiinginkan , maka akan naik menuju prototype function (dalam artian karna ada function yg di inginkan)
