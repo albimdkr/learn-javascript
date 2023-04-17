@@ -601,3 +601,29 @@ function Ongkir(berat){
 console.log('Encapsulation')
 const laptop = new Ongkir(4);
 console.info('total biaya : '+ laptop.totalBiaya());
+
+//Polymorphism
+// poly = banyak, morphe = bentuk (banyak bentuk)
+// analogy its a phone : we can telephone, send message, or vidio
+class People {
+    constructor(name){
+        this.name = name;
+    };
+
+    greet(){
+        return `${this.name} Learner JavaScript`;
+    };
+}
+
+class Learner extends People{
+    constructor(name){
+        super(name);
+    };
+
+    greet(){ //if this func has delete, the program will chosse parent class greet()
+        return `${this.name} Pelajar JavaScript`;
+    };
+}
+
+const learner = new Learner('Albi');
+console.log(learner.greet());
