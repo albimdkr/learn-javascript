@@ -30,6 +30,15 @@ const usersText = `{
 const userObj = JSON.parse (usersText, undefined, 4);
 console.log(userObj);
 
+//Using a reviver function with JSON.parse()
+const userObj1 = JSON.parse(usersText, (key, value) => {
+    let newValue = 
+        typeof value == 'string' && key != 'email' ? value.toUpperCase():value;
+    return newValue;
+});
+console.log(userObj1);
+
+
 
 
 
