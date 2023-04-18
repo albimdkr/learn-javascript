@@ -130,5 +130,3 @@ console.log(txtFilter);
 
 
 
-
-
