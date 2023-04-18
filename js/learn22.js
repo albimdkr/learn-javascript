@@ -112,6 +112,20 @@ const users = {
 const txt = JSON.stringify(users, undefined, 4);
 console.table(txt);
 
+//Using a filter Array with JSON.stringify
+const users1 = {
+    firstName : 'Albi',
+    lastName : 'Mudakar',
+    country : 'Japan',
+    city : 'Tokyo',
+    email : 'Albi@alb.com',
+    skills : ['HTML', 'CSS', 'javaScript', 'NodeJS', 'Java'],
+    age : 250,
+    isLoggedIn : false,
+    points : 30
+}
+const txtFilter = JSON.stringify(users1,['firstName', 'lastName', 'country', 'city', 'age'], 4);
+console.log(txtFilter);
 
 
 
