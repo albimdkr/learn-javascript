@@ -36,6 +36,7 @@ const user = login('albi_nasyabi', function(response){//access parameter callbac
         getPictures(apiKey, function(response){
             const {pic} = response;
             console.log(pic);
+            
         });
     });
 });
