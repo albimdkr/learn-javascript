@@ -34,19 +34,29 @@ doPromise.then((result) => {
 }).catch((err) => console.log(err))
 
 // Promise if wrong
-const doPromise1 = new Promise((resolve, reject) => {
-  setTimeout(() => {
-    const skills = ['HTML', 'CSS', 'JS']
-    if (skills.includes('Node')) {
-      resolve('fullstack developer')
-    } else {
-      reject('Something wrong has happened')
-    }
-  }, 2000)
-})
+// const doPromise1 = new Promise((resolve, reject) => {
+//   setTimeout(() => {
+//     const skills = ['HTML', 'CSS', 'JS']
+//     if (skills.includes('Node')) {
+//       resolve('fullstack developer')
+//     } else {
+//       reject('Something wrong has happened')
+//     }
+//   }, 2000)
+// })
 
-doPromise1
-  .then(result => {
-    console.log(result)
-  })
-  .catch(error => console.error(error))
+// doPromise1
+//   .then(result => {
+//     console.log(result)
+//   })
+//   .catch(error => console.error(error))
+
+//Fetch API
+const url = 'https://restcountries.com/v2/all' // countries api
+fetch(url)
+.then(response => response.json())//accessing API as JSON
+.then(data => {
+    //getting data
+    console.log(data);
+}).catch(error => console.error(error))//handling error if somehting wrong
+
