@@ -60,3 +60,38 @@ fetch(url)
     console.log(data);
 }).catch(error => console.error(error))//handling error if somehting wrong
 
+
+//Async and Await
+const square = async function(n){
+  return n * n
+}
+console.log(square(2));// output : Promise {<resolved>: 4}
+
+//How do we access the value from the promise? To access the value from the promise, we will use the keyword await.
+// const square = async function(n){
+//   return n * n
+// }
+// const value = await square(2)
+// console.log(value)//output : 4
+
+//Fetch API using both promise method and async
+// Promise
+const url1 = 'https://restcountries.com/v2/all';
+fetch (url1)
+.then(response => response.json())
+.then(data => {
+  console.log(data);
+}).catch(error => console.error(error));
+
+//Async and await
+const fetchData = async () => {
+  try {
+    const response = await fetch(url);
+    const countries = await response.json()
+    console.log(countries)
+  }catch (err){
+    console.log(err)
+  }
+}
+console.log('====== async and await');
+fetchData()
