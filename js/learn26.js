@@ -20,7 +20,7 @@ const PI = Math.PI
 const gravity = 9.81
 
 //Arrays
-const names = ['Albi', 'Mudakar', 'Nasy',]
+const name = ['Albi', 'Mudakar', 'Nasy',]
 const numbers = [0, 3.14, 9.81, 37, 98.6, 100]
 const countries = ['Finland', 'Denmark', 'Sweden', 'Norway', 'Iceland']
 const languages = ['Amharic', 'Arabic', 'English', 'French', 'Spanish']
@@ -92,9 +92,9 @@ for( const name of names) {
 names.forEach((name) => name.toUpperCase())
 
 
-const person = {
-  firstName: 'Asabeneh',
-  lastName: 'Yetayeh',
+const persons = {
+  firstName: 'Albi',
+  lastName: 'Mudakar',
   age: 250,
   country: 'Finland',
   city: 'Helsinki',
@@ -108,8 +108,8 @@ for(const key in person) {
 //Object
 // declaring object literal
 const person = {
-    firstName: 'Asabeneh',
-    lastName: 'Yetayeh',
+    firstName: 'Albi',
+    lastName: 'Mudakar',
     age: 250,
     country: 'Finland',
     city: 'Helsinki',
