@@ -43,8 +43,25 @@ for (let i = 0; i < allTitles.length; i++) {
     console.log(allTitles2[i]);
 }
 
+console.log(space)
+
 allTitles2.forEach(title => console.log(title));
 //const allTitles2 = document.querySelectorAll('.title')//thesame goes for select using class
 
+console.log(space)
+
+//Adding attribute
+const titles = document.querySelectorAll('h1')
+titles[3].className = 'title'
+titles[3].id = 'fourth-title'
+
+//Adding attribute using setAttribute
+const setTitles =  document.querySelectorAll('h1');
+setTitles[3].setAttribute('class', 'title');
+setTitles[3].setAttribute('id', 'fourth-title');
+
+//Adding attribute without setAttribute
+titles[3].className = 'title'
+titles[3].id = 'fourth-title'
 
 
