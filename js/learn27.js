@@ -64,4 +64,22 @@ setTitles[3].setAttribute('id', 'fourth-title');
 titles[3].className = 'title'
 titles[3].id = 'fourth-title'
 
+//Adding class Using classList
+//another way to setting an attribute
+titles[3].classList.add('title', 'header-title')
+
+//Removing class using remove
+//similar to adding can also remove attr
+titles[3].classList.remove('title', 'header-title')
+
+//Adding Text to HTML element
+const titles3 = document.querySelectorAll('h1')
+titles3[3].textContent = 'fourth Title'
+
+//Adding text Content using innerHTML
+const titles4 = document.querySelectorAll('h1')
+titles4[3].textContent = 'Fourth Title'
+
+//innerHTML
+
 
