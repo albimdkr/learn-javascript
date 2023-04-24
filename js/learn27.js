@@ -24,3 +24,7 @@ for (let i = 0; i < allTitles1.length; i++) {
 }
 
 console.log(space);
+
+//Getting Elements By Id
+let firstTitle = document.getElementById('first-title');
+console.log(firstTitle);
