@@ -92,4 +92,6 @@ const lists = `
 const ul = document.querySelector('ul')
 ul.innerHTML = lists
 
-
+// The innerHTML property can allow us also to remove all the children of a parent element. Instead of using removeChild() I would recommend the following method.
+// const ul = document.querySelector('ul')
+// ul.innerHTML = ''
