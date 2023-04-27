@@ -95,3 +95,14 @@ ul.innerHTML = lists
 // The innerHTML property can allow us also to remove all the children of a parent element. Instead of using removeChild() I would recommend the following method.
 // const ul = document.querySelector('ul')
 // ul.innerHTML = ''
+
+//adding style
+const titles = document.querySelectorAll('h1')
+titles.forEach((title, i) => {
+    title.style.fontSize = '24px' //all title will have 24px font size
+    if (i % 2 === 0){
+        title.style.color = 'green'
+    } else {
+        title.style.color = 'red'
+    }
+})
