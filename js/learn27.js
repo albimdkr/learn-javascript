@@ -106,3 +106,15 @@ titles.forEach((title, i) => {
         title.style.color = 'red'
     }
 })
+
+//Adding Style Background Color
+const titles = document.querySelector('h1')
+titles.forEach((title, i) => {
+    title.style.fontSize = '24px'
+    if (i % 2 === 0) {
+        title.style.backgroundColor = 'green'
+    } else {
+        title.style.backgroundColor = 'red'
+    }
+})
+
