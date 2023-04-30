@@ -33,3 +33,8 @@ li {
     margin: 5px;
 }
 
+.year {
+    display: flex;
+    justify-content: baseline;
+    font-size: 40px;
+}
