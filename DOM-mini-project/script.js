@@ -1,7 +1,3 @@
-// const years = document.getElementsById('year');
-// const dateTimeElement = document.getElementById('datetime')
-// const challengeElement = document.getElementById('challenge');
-
 function changeYearColor(){
     const yearElement = document.getElementById('year');
     const color = ['red', 'blue', 'green', 'orange'];
