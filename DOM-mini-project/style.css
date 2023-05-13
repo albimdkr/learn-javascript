@@ -33,8 +33,11 @@ li {
     margin: 5px;
 }
 
-.time {
+#date-time {
+    display: block;
     text-align: center;
+    margin: 20px;
+    padding: 5px;
 }
 
 .year {
