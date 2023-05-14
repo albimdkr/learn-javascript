@@ -9,7 +9,7 @@ function time(){
     const date = now.getDate();
     
     //const printAll = (`${hours}:${minutes} - ${day}/${month}/${years}/${date}`);
-    const printAll = (`${month}, ${date} ${year} ${hours}:${minute}:${second}`);
+    const printAll = (`May, ${date} ${year} ${hours}:${minute}:${second}`);
     document.getElementById('date-time').innerHTML = printAll;
 }
 
