@@ -16,20 +16,6 @@
 // Jika menginisialisasi kembali nilai variabel yang menggunakan const, 
 // kita akan mendapati eror “TypeError: Assignment to constant variable.”
 
-/*
-git commit --amend --date "2023-05-18 12:11:14"
-
-git commit --amend --date "2023-05-19 20:09:12"
-
-git commit --amend --date "2023-05-20 09:01:02"
-
-git commit --amend --date "2023-05-21 11:00:12"
-
-git commit --amend --date "2023-05-22 10:11:30"
-
-git commit --amend --date "2023-05-23 15:13:45"
-*/ 
-
 
 
 const z = 100;
