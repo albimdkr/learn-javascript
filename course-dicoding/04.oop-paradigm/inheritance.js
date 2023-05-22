@@ -1,0 +1,50 @@
+// Superclass
+class MailService {
+    constructor(sender) {
+        this.sender = sender;
+    }
+       
+    sendMessage(message, receiver) {
+        console.log(`${this.sender} sent ${message} to ${receiver}`);
+    }
+}
+
+    // Subclass
+    class WhatsAppService extends MailService {
+        sendBroadcastMessage(message, receivers) {
+          for (const receiver of receivers) {
+            this.sendMessage(message, receiver);
+          }
+        }
+      }
+       
+      // Subclass
+      class EmailService extends MailService {
+        sendDelayedMessage(message, receiver, delay) {
+          setTimeout(() => {
+            this.sendMessage(message, receiver);
+          }, delay);
+        }
+      }
+
+      const whatsapp = new WhatsAppService('+6281234567890');
+      const email = new EmailService('dimas@dicoding.com');
+       
+      whatsapp.sendMessage('Hello', '+6289876543210');
+      whatsapp.sendBroadcastMessage('Hello', ['+6289876543210', '+6282234567890']);
+      whatsapp.sendDelayedMessage(); // Error
+       
+      email.sendMessage('Hello', 'john@doe.com');
+      email.sendDelayedMessage('Hello', 'john@doe.com', 3000);
+      email.sendBroadcastMessage(); // Error
+
+// Operator instanceof
+/*
+Penjelasannya:
+    operand1: merupakan objek yang ingin dites prototype-nya.
+    operand2: merupakan constructor function atau class.
+*/
+const whatsapp1 = new WhatsAppService('+6281234567890');
+console.log(whatsapp1 instanceof WhatsAppService); // true
+console.log(whatsapp1 instanceof EmailService); // false
+    
