@@ -589,3 +589,7 @@ Berikut beberapa class bawaan JavaScript yang bisa Anda eksplorasi secara mandir
 Video
 https://youtu.be/Z5I46E3-QMU
 
+Materi Pendukung
+- https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object-oriented_JS
+- https://betterprogramming.pub/object-oriented-programming-in-javascript-b3bda28d3e81
+
