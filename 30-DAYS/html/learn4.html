@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>LEARN 2 | JAVASCRIPT</title>
+    <title>LEARN 4 | JAVASCRIPT</title>
   </head>
   <link rel="icon" type="image/x-icon" href="/img/js-logo.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -59,19 +59,19 @@
       margin: 10px;
     }
 
-    .container-syntax {
+    .container-primitive {
       padding: 10px;
       margin: 7px;
       border: 2px solid white;
     }
 
-    .container-variable {
+    .container-nonprimitive {
       padding: 10px;
       margin: 7px;
       border: 2px solid white;
     }
 
-    .container-operator {
+    .container-mathNumber {
       padding: 10px;
       margin: 7px;
       border: 2px solid white;
@@ -99,28 +99,44 @@
   </style>
   <body>
     <div class="container" id="container">
-      <h2>JAVASCRIPT BASIC</h2>
-      <div class="board">
-        <h3 id="title">Syntax, Variable</h3>
-        <div class="implentation">
-          <div class="container-syntax">
-            <h3>Syntax</h3>
-            <p id="syntax"></p>
-          </div>
+        <h2>JAVASCRIPT BASIC</h2>
+        <div class="board">
+          <h3 id="title">DATA TYPE</h3>
+          <div class="implentation">
+            <div class="container-primitive">
+              <h3>Primitive</h3>
+              <p id="string"></p>
+              <p id="number"></p>
+              <p id="boolean"></p>
+              <p id="undefined"></p>
+              <p id="null"></p>
+              <p id="symbol"></p>
+              <p id="bigint"></p>
+            </div>
 
-          <div class="container-variable">
-            <h3>Variable</h3>
-            <p id="variable"></p>
-            <p id="var"></p>
-            <p id="let"></p>
-            <p id="const"></p>
-            <p id="const1"></p>
-          </div>
 
+            <div class="container-primitive">
+              <h3>Non - Primitive</h3>
+              <p id="object"></p>
+              <p id="array"></p>
+            </div>
+
+            <div class="container-mathNumber">
+              <h3>Math Number</h3>
+              <p id="PI"></p>
+              <p id="round"></p>
+              <p id="floor"></p>
+              <p id="ceil"></p>
+              <p id="min"></p>
+              <p id="max"></p>
+              <p id="random"></p>
+              <p id="randNum-0-10"></p>
+            </div>
+
+
+          </div>
         </div>
-      </div>
     </div>
-
-    <script src="./js/learn2.js" ></script>
+    <script src="/30-DAYS/js/learn4.js" ></script>
   </body>
 </html>

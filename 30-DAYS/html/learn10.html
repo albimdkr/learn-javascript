@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>LEARN 25 | JAVASCRIPT</title>
+    <title>LEARN 10 | JAVASCRIPT</title>
   </head>
   <link rel="icon" type="image/x-icon" href="/img/js-logo.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -59,12 +59,23 @@
       margin: 10px;
     }
 
-    .container-classes{
+    .container-IFStatement{
       padding: 10px;
       margin: 7px;
       border: 2px solid white;
     }
 
+    .container-IFELSEStatement{
+      padding: 10px;
+      margin: 7px;
+      border: 2px solid white;
+    }
+
+    .container-switchcase {
+      padding: 10px;
+      margin: 7px;
+      border: 2px solid white
+    }
 
     @media (max-width: 768px) {
       .container {
@@ -90,20 +101,40 @@
     <div class="container" id="container">
       <h2>JAVASCRIPT BASIC</h2>
       <div class="board">
-        <h3 id="title">Closer</h3>
+        <h3 id="title">CONDITIONAL</h3>
         <div class="implentation">
 
-          <div class="container-classes">
-            <h3>Closer Function</h3>
-            <p id="classes-1"></p>
-            <p id="classes-2"></p>
-            <p id="classes-3"></p>
+          <div class="container-IFStatement">
+            <h3>IF Statment</h3>
+            <p id="IF-Statment-1"></p>
           </div>
 
+          <div class="container-IFELSEStatement">
+            <h3>IF ELSE Statment</h3>
+            <p id="IF-ELSE-Statment-1"></p>
+            <p id="IF-ELSE-Statment-2"></p>
+            <p id="IF-ELSE-Statment-3"></p>
+          </div>
+
+          <div class="container-IFELSEStatement">
+            <h3>IF ELSE IF ELSE Statment</h3>
+            <p id="IF-ELSEIF-ELSE-Statment-1"></p>
+            <p id="IF-ELSEIF-ELSE-Statment-2"></p>
+            <p id="IF-ELSEIF-ELSE-Statment-3"></p>
+          </div>
+
+          <div class="container-switchcase">
+            <h3>SWITCH CASE Statment</h3>
+            <p id="SWITCH-CASE-Statment-1">
+              <input type="text" id="fetchValue" placeholder="Enter the number value" onblur="getValue()">
+            </p>
+            <p id="SWITCH-CASE-Statment-2"></p>
+          </div>
 
         </div>
       </div>
     </div>
-    <script src="./js/learn25.js" ></script>
+
+    <script src="/30-DAYS/js/learn10.js" ></script>
   </body>
 </html>
