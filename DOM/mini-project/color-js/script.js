@@ -16,7 +16,6 @@ btn.after(btnRandom);
 btnRandom.addEventListener('click', function(){
     const r = Math.round(Math.random() * 255 + 1);
     document.body.style.backgroundColor = 'rgb('+ r +',100,100)';
-    //alert(r);
 });
 
 
