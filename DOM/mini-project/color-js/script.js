@@ -18,5 +18,8 @@ btnRandom.addEventListener('click', function(){
     document.body.style.backgroundColor = 'rgb('+ r +',100,100)';
 });
 
-
-
+const sMerah = document.querySelector('input[name=sMerah]');
+sMerah.addEventListener('change', function() {
+   const r = sMerah.value;
+   document.body.style.backgroundColor = 'rgb('+r+',100,100)';
+});
