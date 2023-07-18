@@ -20,13 +20,13 @@ btnRandom.addEventListener('click', function(){
 
 const sMerah = document.querySelector('input[name=sMerah]');
 const sHijau = document.querySelector('input[name=sHijau]');
-sMerah.addEventListener('change', function() {
+sMerah.addEventListener('input', function() {
     const r = sMerah.value;
     const g = sHijau.value;
     document.body.style.backgroundColor = 'rgb('+r+','+g+',100)';
 });
 
-sHijau.addEventListener('change', function() {
+sHijau.addEventListener('input', function() {
     const r = sMerah.value;
     const g = sHijau.value;
     document.body.style.backgroundColor = 'rgb('+r+','+g+',100)';
