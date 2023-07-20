@@ -23,11 +23,15 @@ btnRandom.addEventListener('click', function(){
 const sMerah = document.querySelector('input[name=sMerah]');
 const sHijau = document.querySelector('input[name=sHijau]');
 const sBiru = document.querySelector('input[name=sBiru]');
+const form = document.querySelector('input[name=formRgb]').value;
 sMerah.addEventListener('input', function() {
     const r = sMerah.value;
     const g = sHijau.value;
     const b = sBiru.value;
     document.body.style.backgroundColor = 'rgb('+r+','+g+','+b+')';
+    const rgb = 'rgb('+r+','+g+','+b+')';
+    document.getElementById('result').value = rgb;
+
 });
 
 sHijau.addEventListener('input', function() {
@@ -35,6 +39,8 @@ sHijau.addEventListener('input', function() {
     const g = sHijau.value;
     const b = sBiru.value;
     document.body.style.backgroundColor = 'rgb('+r+','+g+','+b+')';
+    const rgb = 'rgb('+r+','+g+','+b+')';
+    document.getElementById('result').value = rgb;
  });
 
  sBiru.addEventListener('input', function() {
@@ -42,6 +48,16 @@ sHijau.addEventListener('input', function() {
     const g = sHijau.value;
     const b = sBiru.value;
     document.body.style.backgroundColor = 'rgb('+r+','+g+','+b+')';
+    const rgb = 'rgb('+r+','+g+','+b+')';
+    document.getElementById('result').value = rgb;
  });
 
 
+//Generate number rgb to form
+// const form = document.querySelector('input[name=formRgb]');
+// form.oninput = function (){
+//     const r = sMerah.value;
+//     const g = sHijau.value;
+//     const b = sBiru.value;
+//     form.document.createTextNode = 'rgb('+r+','+g+','+b+')';
+// }
