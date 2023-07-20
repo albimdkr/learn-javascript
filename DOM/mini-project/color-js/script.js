@@ -8,6 +8,7 @@ btn.onclick = function (){
 //case 2 > btn Random backgroundColor
 const btnRandom = document.createElement('button');
 const btnValue = document.createTextNode('Random Color');
+const form = document.querySelector('input[name=formRgb]').value;
 
 btnRandom.appendChild(btnValue);
 btnRandom.setAttribute('type', 'button');
@@ -15,7 +16,11 @@ btn.after(btnRandom);
 
 btnRandom.addEventListener('click', function(){
     const r = Math.round(Math.random() * 255 + 1);
-    document.body.style.backgroundColor = 'rgb('+ r +',100,100)';
+    const g = Math.round(Math.random() * 255 + 1);
+    const b = Math.round(Math.random() * 255 + 1);
+    const rgb = 'rgb('+r+','+g+','+b+')';
+    document.getElementById('result').value = rgb; //set to form
+    document.body.style.backgroundColor = rgb;
 });
 
 
@@ -23,7 +28,6 @@ btnRandom.addEventListener('click', function(){
 const sMerah = document.querySelector('input[name=sMerah]');
 const sHijau = document.querySelector('input[name=sHijau]');
 const sBiru = document.querySelector('input[name=sBiru]');
-const form = document.querySelector('input[name=formRgb]').value;
 sMerah.addEventListener('input', function() {
     const r = sMerah.value;
     const g = sHijau.value;
