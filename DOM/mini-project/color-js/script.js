@@ -28,9 +28,9 @@ sMerah.addEventListener('input', function() {
     const r = sMerah.value;
     const g = sHijau.value;
     const b = sBiru.value;
-    document.body.style.backgroundColor = 'rgb('+r+','+g+','+b+')';
     const rgb = 'rgb('+r+','+g+','+b+')';
-    document.getElementById('result').value = rgb;
+    document.body.style.backgroundColor = rgb;
+    document.getElementById('result').value = rgb; //set to form
 
 });
 
@@ -38,18 +38,18 @@ sHijau.addEventListener('input', function() {
     const r = sMerah.value;
     const g = sHijau.value;
     const b = sBiru.value;
-    document.body.style.backgroundColor = 'rgb('+r+','+g+','+b+')';
     const rgb = 'rgb('+r+','+g+','+b+')';
-    document.getElementById('result').value = rgb;
+    document.body.style.backgroundColor = rgb;
+    document.getElementById('result').value = rgb;//set to form
  });
 
  sBiru.addEventListener('input', function() {
     const r = sMerah.value;
     const g = sHijau.value;
     const b = sBiru.value;
-    document.body.style.backgroundColor = 'rgb('+r+','+g+','+b+')';
     const rgb = 'rgb('+r+','+g+','+b+')';
-    document.getElementById('result').value = rgb;
+    document.body.style.backgroundColor = rgb;
+    document.getElementById('result').value = rgb;//set to form
  });
 
 
