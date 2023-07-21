@@ -1,5 +1,5 @@
 //case 1 > btnClick change backgroundColor
-const btn = document.querySelector('section button');
+const btn = document.querySelector('section#a button');
 btn.onclick = function (){
     document.body.classList.toggle('biru-muda');
 };
@@ -28,6 +28,7 @@ btnRandom.addEventListener('click', function(){
 const sMerah = document.querySelector('input[name=sMerah]');
 const sHijau = document.querySelector('input[name=sHijau]');
 const sBiru = document.querySelector('input[name=sBiru]');
+const resultColor = document.getElementById('result-color');
 sMerah.addEventListener('input', function() {
     const r = sMerah.value;
     const g = sHijau.value;
@@ -56,12 +57,15 @@ sHijau.addEventListener('input', function() {
     document.getElementById('result').value = rgb;//set to form
  });
 
+//changing color by mouse
+document.body.addEventListener('mousemove', function(e){
+    //search cordinate
+    //console.log(e.clientX);
 
-//Generate number rgb to form
-// const form = document.querySelector('input[name=formRgb]');
-// form.oninput = function (){
-//     const r = sMerah.value;
-//     const g = sHijau.value;
-//     const b = sBiru.value;
-//     form.document.createTextNode = 'rgb('+r+','+g+','+b+')';
-// }
+    //size browser : windows
+    //console.log(window.innerWidth);
+
+    //generate rgb : 1 / lebar 289 * 255 
+    const xPos = (e.clientX / window.innerWidth) * 255;
+    console.log(xPos);
+});

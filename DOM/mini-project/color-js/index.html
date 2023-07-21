@@ -4,10 +4,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;1,300&display=swap" rel="stylesheet" />
     <title>COLOR JS</title>
     <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            font-family:poppins;
+        }
+
         body {
+            margin: 0px;
+            padding: 10px;
+        }
+
+        .title {
             text-align: center;
+        }
+
+        section {
+            text-align: center;
+            margin: 50px;
+            background-color: #fefefe;
+            border: 3px solid black;
+            padding: 10px;
         }
 
         .kotak {
@@ -25,28 +46,54 @@
         
         .biru-muda {background-color: lightseagreen;}
 
+        #result-color {
+            height: 100px;
+            width : 100px;
+            margin: 10px auto;
+            border: 1px solid black;
+        }
+
+        .albimdkr_ {
+            text-align: center;
+        }
+
     </style>
 </head>
 <body>
     <!-- <img src="/30-DAYS/img/js-logo.png" alt=""> -->
-    <section >
-        <h1>COLOR JS</h1>
-        <button type="button">Change Color</button>
-    </section>
+
+    <h1 class="title">COLOR GENERATOR</h1>
+    <section id="a">
+        <h1>RGB COLOR</h1>
+        <button>Change Color</button> 
+        <!-- btn js -->
+        <br>
+        <div class="kotak merah"></div>
+        <input type="range" name="sMerah" min="0" max="255">
     
-    <br>
-    <div class="kotak merah"></div>
-    <input type="range" name="sMerah" min="0" max="255">
+        <div class="kotak hijau"></div>
+        <input type="range" name="sHijau" min="0" max="255">
+    
+        <div class="kotak biru"></div>
+        <input type="range" name="sBiru" min="0" max="255">
+     
+        <div class="kotak"></div>
+        <h4>RGB Result</h4>
+        <input type="text" name="formRgb" id="result">
+        <!-- <div id="result-color"></div> -->
+    </section>
 
-    <div class="kotak hijau"></div>
-    <input type="range" name="sHijau" min="0" max="255">
+    <section id="b">
+        <h1>HEX COLOR</h1>
+        <button>Change Color</button> 
+        <!-- btn js -->
+    
+        <div class="kotak"></div>
+        <h4>HEX Result</h4>
+        <input type="text" name="formRgb" id="result">
+    </section>
 
-    <div class="kotak biru"></div>
-    <input type="range" name="sBiru" min="0" max="255">
-
-    <div class="kotak"></div>
-    <h4>RGB Result</h4>
-    <input type="text" name="formRgb" id="result">
+    <h2 class="albimdkr_">Made with albimdkr_</h2>
 
 <script src="script.js"></script>
 </body>
