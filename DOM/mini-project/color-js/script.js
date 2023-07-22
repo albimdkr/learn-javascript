@@ -66,6 +66,6 @@ document.body.addEventListener('mousemove', function(e){
     //console.log(window.innerWidth);
 
     //generate rgb : 1 / lebar 289 * 255 
-    const xPos = (e.clientX / window.innerWidth) * 255;
+    const xPos = Math.round((e.clientX / window.innerWidth) * 255);
     console.log(xPos);
 });
