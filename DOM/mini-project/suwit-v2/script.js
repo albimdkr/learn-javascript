@@ -45,4 +45,25 @@ function getHasil(comp, player){
 //     info.innerHTML = hasil;
 // });
 
+//Efficiency Code
+const pilihan = document.querySelectorAll('li img');
+pilihan.forEach(function(pil){
+    pil.addEventListener('click', function() {
+
+        //calling function
+        const pilihanComputer = getPilihanComputer();
+
+        //pil, untuk mennetukan gambar yang player click saja
+        const pilihanPlayer = pil.className;
+        const hasil = getHasil(pilihanComputer, pilihanPlayer);
+
+        //set img for compoter when player click
+        const imgComputer = document.querySelector('.img-computer');
+        imgComputer.setAttribute('src', 'img/' + pilihanComputer + '.png');
+
+        const info = document.querySelector('.info');
+        info.innerHTML = hasil;
+    });
+});
+
 
