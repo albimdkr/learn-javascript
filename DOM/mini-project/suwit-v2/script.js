@@ -22,8 +22,26 @@ function getHasil(comp, player){
     if (player == 'semut') return (comp = 'orang')? 'KALAH!' : 'MENANG!';
 }
 
-
 //add event for ui
+//menambahkan img putar untuk computer
+function putarComputer(){
+    const imgComputer = document.querySelector('.img-computer');
+    const img = ['gajah', 'semut', 'orang'];
+    
+    //setinterval, merupakan fungsi untuk melakukan sesuait secara berulang, selama interval waktu tertentu
+    let i = 0;
+    const startTime = new Date().getTime(); //pada saat fungsi putarComputer dijalankan, ambil waktu saat itu, nanti 1 detik kemudian akan diberhentikan
+    setInterval(function(){
+        if ( new Date().getTime() - startTime > 1000){ //jika waktu selisih nya sudah 1 detik, maka berhentikan
+            clearInterval;
+            return; //supaya keluar dari function
+        }
+        imgComputer.setAttribute('src', 'img/' + img[i++] + '.png');
+        if( i == img.length) i = 0; //agar jika lebih dari 3 gambar, maka kembali lagi ke nilai 0
+    },100);
+}
+
+//not efficient 
 // const pGajah = document.querySelector('.gajah');
 // pGajah.addEventListener('click', function(){
 //     const pilihanComputer = getPilihanComputer();
@@ -56,14 +74,18 @@ pilihan.forEach(function(pil){
         //pil, untuk mennetukan gambar yang player click saja
         const pilihanPlayer = pil.className;
         const hasil = getHasil(pilihanComputer, pilihanPlayer);
+        
+        putarComputer();
 
-        //set img for compoter when player click
-        const imgComputer = document.querySelector('.img-computer');
-        imgComputer.setAttribute('src', 'img/' + pilihanComputer + '.png');
-
-        const info = document.querySelector('.info');
-        info.innerHTML = hasil;
+        //biarkan fungsi putarComputer selesai dulu, baru jalankan dibawah ini
+        setTimeout(function(){
+            //set img for compoter when player click
+            const imgComputer = document.querySelector('.img-computer');
+            imgComputer.setAttribute('src', 'img/' + pilihanComputer + '.png');
+    
+            const info = document.querySelector('.info');
+            info.innerHTML = hasil;
+        }, 1000);
     });
 });
-
 
