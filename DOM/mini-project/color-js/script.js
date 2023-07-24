@@ -25,37 +25,50 @@ btnRandom.addEventListener('click', function(){
 
 
 //case 3 > with input type change backgroundColor
-const sMerah = document.querySelector('input[name=sMerah]');
-const sHijau = document.querySelector('input[name=sHijau]');
-const sBiru = document.querySelector('input[name=sBiru]');
-const resultColor = document.getElementById('result-color');
-sMerah.addEventListener('input', function() {
-    const r = sMerah.value;
-    const g = sHijau.value;
-    const b = sBiru.value;
-    const rgb = 'rgb('+r+','+g+','+b+')';
-    document.body.style.backgroundColor = rgb;
-    document.getElementById('result').value = rgb; //set to form
+// const sMerah = document.querySelector('input[name=sMerah]');
+// const sHijau = document.querySelector('input[name=sHijau]');
+// const sBiru = document.querySelector('input[name=sBiru]');
+// const resultColor = document.getElementById('result-color');
+// sMerah.addEventListener('input', function() {
+//     const r = sMerah.value;
+//     const g = sHijau.value;
+//     const b = sBiru.value;
+//     const rgb = 'rgb('+r+','+g+','+b+')';
+//     document.body.style.backgroundColor = rgb;
+//     document.getElementById('result').value = rgb; //set to form
 
-});
+// });
 
-sHijau.addEventListener('input', function() {
-    const r = sMerah.value;
-    const g = sHijau.value;
-    const b = sBiru.value;
-    const rgb = 'rgb('+r+','+g+','+b+')';
-    document.body.style.backgroundColor = rgb;
-    document.getElementById('result').value = rgb;//set to form
- });
+// sHijau.addEventListener('input', function() {
+//     const r = sMerah.value;
+//     const g = sHijau.value;
+//     const b = sBiru.value;
+//     const rgb = 'rgb('+r+','+g+','+b+')';
+//     document.body.style.backgroundColor = rgb;
+//     document.getElementById('result').value = rgb;//set to form
+//  });
 
- sBiru.addEventListener('input', function() {
-    const r = sMerah.value;
-    const g = sHijau.value;
-    const b = sBiru.value;
-    const rgb = 'rgb('+r+','+g+','+b+')';
-    document.body.style.backgroundColor = rgb;
-    document.getElementById('result').value = rgb;//set to form
- });
+//  sBiru.addEventListener('input', function() {
+//     const r = sMerah.value;
+//     const g = sHijau.value;
+//     const b = sBiru.value;
+//     const rgb = 'rgb('+r+','+g+','+b+')';
+//     document.body.style.backgroundColor = rgb;
+//     document.getElementById('result').value = rgb;//set to form
+//  });
+
+// Effeciency code
+const range = document.querySelector('input');
+for (let i = 0; i < range.length; i++){
+    range[i].addEventListener('input', function(){
+        const r = range[0].value;
+        const g = range[1].value;
+        const b = range[2].value;
+        const rgb = `rgb(${r},${g},${b})`;
+        document.body.style.backgroundColor = rgb;
+        document.getElementById('result').value = rgb;
+    });
+}
 
 //changing color by mouse
 document.body.addEventListener('mousemove', function(e){
@@ -70,11 +83,12 @@ document.body.addEventListener('mousemove', function(e){
     const xPos = Math.round((e.clientX / window.innerWidth) * 255);
 
     //y=green
-    const yPos = Math.round((e.clientY/ window.innerWidth) * 255);
+    const yPos = Math.round((e.clientY / window.innerWidth) * 255);
     
     //100=blue
 
     //set
-    document.body.style.backgroundColor = 'rgb('+xPos+','+yPos+', 100)';
+    const rgb = `rgb(${xPos}, ${yPos}, 100)`;
+    document.body.style.backgroundColor = rgb;
 
 });
