@@ -89,3 +89,10 @@ pilihan.forEach(function(pil){
     });
 });
 
+// add score 
+const scoreComputer = document.querySelector('.score-computer h4');
+const valueScore = getHasil(comp, player);
+
+
+
+
