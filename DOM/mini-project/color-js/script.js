@@ -66,10 +66,15 @@ document.body.addEventListener('mousemove', function(e){
     //console.log(window.innerWidth);
 
     //generate rgb : 1 / lebar 289 * 255 
-    //x = red, y=green, 100=blue
+    //x=red
     const xPos = Math.round((e.clientX / window.innerWidth) * 255);
 
+    //y=green
     const yPos = Math.round((e.clientY/ window.innerWidth) * 255);
     
+    //100=blue
+
+    //set
+    document.body.style.backgroundColor = 'rgb('+xPos+','+yPos+', 100)';
 
 });
