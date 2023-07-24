@@ -23,3 +23,26 @@ function getHasil(comp, player){
 }
 
 
+//add event for ui
+// const pGajah = document.querySelector('.gajah');
+// pGajah.addEventListener('click', function(){
+//     const pilihanComputer = getPilihanComputer();
+
+//     //kebetulan nama class nya sama adalah = gajah
+//     const pilihanPlayer = pGajah.className;
+
+//     //meentukan hasil
+//     const hasil = getHasil(pilihanComputer, pilihanPlayer);
+
+//     //get gambarComputer
+//     const imgComputer = document.querySelector('.img-computer');
+
+//     //DOM manipulation : setAttribute
+//     imgComputer.setAttribute('src', 'img/' + pilihanComputer + '.png');
+
+//     //set info
+//     const info = document.querySelector('.info');
+//     info.innerHTML = hasil;
+// });
+
+
