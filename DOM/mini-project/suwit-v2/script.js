@@ -15,12 +15,46 @@ function getPilihanComputer (){
     return 'semut';
 }
 
+//score
+let playerScore = 0;
+let computerScore = 0;
+
 function getHasil(comp, player){
-    if (player == comp) return 'SERI!';
-    if (player == 'gajah') return (comp = 'orang')? 'MENANG!' : 'KALAH!';
-    if (player == 'orang') return ( comp == 'gajah')? 'KALAH!' : 'MENANG!';
-    if (player == 'semut') return (comp = 'orang')? 'KALAH!' : 'MENANG!';
+    if (player == comp) {
+        return 'SERI!'
+     } else if (player == 'gajah') {
+        if(comp == 'orang'){
+            computerScore++;
+            return 'KALAH!';
+        } else {
+            playerScore++;
+            return 'MENANG!';
+        }
+     } else if (player == 'orang') {
+        if(comp == 'gajah') {
+            computerScore++;
+            return 'KALAH!';
+        } else {
+            playerScore++;
+            return 'MENANG!';
+        }
+     } else if (player == 'semut'){
+        if (comp = 'orang'){
+            computerScore++;
+            return'KALAH!';
+        } else {
+            playerScore++;
+            return 'MENANG!';
+        }
+    }
 }
+
+function updateScore(){
+    document.querySelector('input[name=score-player]').value = 'score anda : ' + playerScore;
+    document.querySelector('input[name=score-computer]').value = 'score computer : ' + computerScore; 
+}
+
+
 
 //add event for ui
 //menambahkan img putar untuk computer
@@ -85,13 +119,16 @@ pilihan.forEach(function(pil){
     
             const info = document.querySelector('.info');
             info.innerHTML = hasil;
+            updateScore();
         }, 1000);
     });
 });
 
 // add score 
-const scoreComputer = document.querySelector('.score-computer h4');
-const valueScore = getHasil(comp, player);
+
+
+
+
 
 
 
