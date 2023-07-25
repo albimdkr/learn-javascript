@@ -152,13 +152,13 @@ img {
     box-sizing: border-box;
     padding: 1px;
     display: flex;
-    justify-content: flex-end;
+    justify-content:flex-start;
     /* border : 3px solid red; */
 }
 
 input {
     height: 2.5em;
-    width: 10em;
+    width: 5em;
     box-sizing: border-box;
     margin: 10px;
     padding: 10;
@@ -170,6 +170,5 @@ input {
     box-sizing: border-box;
     padding: 5px;
     display: flex;
-    justify-content: flex-start;
-    /* border : 3px solid red; */
+    justify-content: flex-end;
 }

@@ -50,8 +50,8 @@ function getHasil(comp, player){
 }
 
 function updateScore(){
-    document.querySelector('input[name=score-player]').value = 'score anda : ' + playerScore;
-    document.querySelector('input[name=score-computer]').value = 'score computer : ' + computerScore; 
+    document.querySelector('input[name=score-player]').value = 'score : ' + playerScore;
+    document.querySelector('input[name=score-computer]').value = 'score : ' + computerScore; 
 }
 
 
