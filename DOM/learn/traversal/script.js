@@ -12,7 +12,8 @@
 
 
 //DOM TRAVERSAL
-// Traversal : parentElement
+// parentNode > node  |  parentElement > element  |  nextSibling > node 
+// | nextElementSibling > element  |  previousSibling > node  |   previousElementSibling > element
 // const closeIcon = document.querySelectorAll('.close');
 // for (let i = 0; closeIcon.length; i++){
 //     closeIcon[i].addEventListener('click', function(e){
